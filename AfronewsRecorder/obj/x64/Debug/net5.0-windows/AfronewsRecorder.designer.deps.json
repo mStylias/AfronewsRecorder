@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Ookii.Dialogs.Wpf/3.1.0": {
+        "runtime": {
+          "lib/net5.0-windows7.0/Ookii.Dialogs.Wpf.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.0.0"
+          }
+        }
+      },
+      "ScreenRecorderLib/3.1.1": {}
+    }
+  },
+  "libraries": {
+    "Ookii.Dialogs.Wpf/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EpUWoSLLO1aVkUmo2dPE4xO+zQZRxbp13agbbQzGBL1ACALgCD69cTwdLdPdg2LIsPcZ4uA3iID+YaazdZxyww==",
+      "path": "ookii.dialogs.wpf/3.1.0",
+      "hashPath": "ookii.dialogs.wpf.3.1.0.nupkg.sha512"
+    },
+    "ScreenRecorderLib/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V79BiutbSMggdlNFjwbVyVmt1UgBr04ShOt3+bSflWjQ3NKpS16uuEgRjq7sAQtmtI/Yl2eB0hJACXSk4LkeuQ==",
+      "path": "screenrecorderlib/3.1.1",
+      "hashPath": "screenrecorderlib.3.1.1.nupkg.sha512"
+    }
+  }
+}

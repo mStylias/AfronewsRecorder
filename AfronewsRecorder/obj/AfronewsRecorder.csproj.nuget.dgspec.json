@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Michalis\\source\\repos\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj": {}
+    "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Michalis\\source\\repos\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj": {
+    "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michalis\\source\\repos\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
+        "projectUniqueName": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
         "projectName": "AfronewsRecorder",
-        "projectPath": "C:\\Users\\Michalis\\source\\repos\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
+        "projectPath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
         "packagesPath": "C:\\Users\\Michalis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michalis\\source\\repos\\AfronewsRecorder\\AfronewsRecorder\\obj\\",
+        "outputPath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -43,6 +43,16 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Ookii.Dialogs.Wpf": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "ScreenRecorderLib": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
