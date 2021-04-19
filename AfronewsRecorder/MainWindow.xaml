@@ -5,7 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AfronewsRecorder"
         mc:Ignorable="d"
-        Title="Afronews Recorder" Height="620" Width="584" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/record_icon_64.png" Closing="Window_Closing">
+        Title="Afronews Recorder" 
+        Height="620" Width="584" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Icon="/record_icon_64.png" 
+        Closing="Window_Closing">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -128,9 +133,14 @@
             <RowDefinition Height="75"/>
         </Grid.RowDefinitions>
 
-        <Grid
-            Background="#7C4D96"
+        <Grid Visibility="Hidden"
             Grid.Row="0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#00000000"/>
+                    <GradientStop Color="#FF7C4D96" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="177*"/>
                 <ColumnDefinition Width="407*"/>
@@ -149,30 +159,16 @@
 
         <Grid Grid.Row="1">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="1.5*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.*"/>
-                    <RowDefinition Height="1.5*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <Image Source="/background.png" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="3"/>
+                <!--<Image Source="/background.png" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="3"/>-->
 
                 <Button Style="{DynamicResource ButtonRecordStyle}" Click="ButtonRecord_Click"
                     x:Name="ButtonRecord"
-                    Grid.Column="1" Grid.Row="1" 
-                    HorizontalAlignment="Left" VerticalAlignment="Bottom" 
-                    Margin="14,0,0,60"
                     Background="Transparent"
                     BorderThickness="0"
                     Cursor="Hand">
                     <Grid Background="Transparent">
-                        <Path Width="120" Stretch="Uniform"  StrokeThickness="0" Fill="#8C4852">
+                        <Path Width="160" Stretch="Uniform"  StrokeThickness="0" Fill="#8C4852">
                             <Path.Data>
                                 <GeometryGroup FillRule="EvenOdd">
                                     <EllipseGeometry RadiusX="100" RadiusY="100" Center="0,0" />
@@ -180,7 +176,7 @@
                                 </GeometryGroup>
                             </Path.Data>
                         </Path>
-                        <Path x:Name="CircleRecord" Width="60" Stretch="Uniform" StrokeThickness="0" Fill="#7C4D96">
+                        <Path x:Name="CircleRecord" Width="80" Stretch="Uniform" StrokeThickness="0" Fill="#7C4D96">
                             <Path.Data>
                                 <GeometryGroup FillRule="EvenOdd">
                                     <EllipseGeometry RadiusX="60" RadiusY="60" Center="0,0" />
@@ -195,9 +191,14 @@
             </Grid>
         </Grid>
 
-        <Grid
-            Background="#7C4D96"
+        <Grid Visibility="Hidden"
             Grid.Row="2">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF7C4D96"/>
+                    <GradientStop Color="#00000000" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="1.2*"/>
@@ -246,7 +247,7 @@
                         Content="Browse"
                         Click="ButtonBrowse_Click"/>
                 </StackPanel>
-                
+
             </Grid>
 
         </Grid>
