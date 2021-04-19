@@ -8,8 +8,8 @@
         Title="Simple Button Recorder" 
         Height="644" Width="886" 
         WindowStartupLocation="CenterScreen" 
-        WindowStyle="None" AllowsTransparency="True" Background="#FFEDEFEE"
-        Icon="/record_icon_64.png"
+        WindowStyle="SingleBorderWindow"  Background="#FFEDEFEE"
+        Icon="/record_icon_64.png" ResizeMode="CanMinimize"
         >
            
     <!--custom titlebar-->

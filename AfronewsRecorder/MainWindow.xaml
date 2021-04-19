@@ -8,8 +8,14 @@
         Title="Simple Button Recorder" 
         Height="350" Width="200" 
         WindowStartupLocation="CenterScreen" 
-        WindowStyle="None" AllowsTransparency="True" Background="#FFEDEFEE"
-        Icon="/record_icon_64.png">
+        WindowStyle="SingleBorderWindow" Background="#FFEDEFEE"
+        Icon="/record_icon_64.png" ResizeMode="CanMinimize">
+    <!--custom titlebar-->
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="32" CornerRadius="0" GlassFrameThickness="70" 
+                          NonClientFrameEdges="None" ResizeBorderThickness="0" UseAeroCaptionButtons="true" />
+    </WindowChrome.WindowChrome>
+
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -124,13 +130,8 @@
         </Style>
     </Window.Resources>
 
-    <!--custom titlebar-->
-    <WindowChrome.WindowChrome>
-        <WindowChrome CaptionHeight="32" CornerRadius="0" GlassFrameThickness="70" 
-                          NonClientFrameEdges="None" ResizeBorderThickness="0" UseAeroCaptionButtons="true" />
-    </WindowChrome.WindowChrome>
 
-
+   
 
 
     <Grid>
@@ -186,7 +187,10 @@
                     Background="Transparent"
                     BorderThickness="0"
                     Cursor="Hand">
-                    <Grid Background="Transparent">
+                    <Grid Background="Transparent" >
+                       
+
+
                         <Path Width="160" Stretch="Uniform"  StrokeThickness="0" Fill="#8C4852">
                             <Path.Data>
                                 <GeometryGroup FillRule="EvenOdd">
@@ -203,6 +207,7 @@
                             </Path.Data>
 
                         </Path>
+                        <TextBlock Text="REC"  FontSize="16" Foreground="White"  FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
 
                 </Button>
@@ -227,14 +232,14 @@
             </Grid.RowDefinitions>
             <TextBlock
                     x:Name="TextBlockRecordTime"
-                    d:Text="REC: 00:00:00"
+                    d:Text="00:00:00"
                     TextWrapping="Wrap"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Margin="8,0,0,0"
                     FontSize="16"
                     FontWeight="DemiBold"
-                    Foreground="Black" Text="REC: 00:00:00"
+                    Foreground="Black" Text="00:00:00"
                 />
 
             <!--<TextBlock 

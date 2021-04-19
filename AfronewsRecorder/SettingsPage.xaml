@@ -63,7 +63,7 @@
             </StackPanel>
 
             <TextBlock x:Name="TextBlockRecordingPath" TextAlignment="Center" VerticalAlignment="Center" FontSize="16">
-                    Recording path:
+                    Save to:
             </TextBlock>
 
             <Button Style="{DynamicResource ButtonBrowsePath}"
@@ -149,12 +149,11 @@
             </ComboBox>
 
             <!--fps selection-->
-            <TextBlock
-                Text="Frames Per Second(FPS)" 
+            <TextBlock 
                 FontSize="20" FontWeight="DemiBold" 
                 Margin="0,15" Foreground="#0E3C6C" 
                 TextAlignment="Center" VerticalAlignment="Center"
-            />
+             Text="Frame Rate"/>
 
             <ComboBox
                 x:Name="FramesPerSecond"
@@ -182,10 +181,10 @@
                 wpf:TextFieldAssist.UnderlineBrush="#0E3C6C"
                 BorderBrush="#7C4D96"
                 MaxWidth="300"
-                FontSize="16" SelectionChanged="WindowRecord_SelectionChanged"
+                FontSize="16" SelectionChanged="WindowRecord_SelectionChanged" DropDownOpened="WindowRecord_DropDownOpened"
                 >
 
-                <ComboBoxItem IsSelected="True">Default</ComboBoxItem>
+                
             </ComboBox>
 
 

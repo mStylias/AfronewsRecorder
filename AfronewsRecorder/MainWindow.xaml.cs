@@ -68,7 +68,7 @@ namespace AfronewsRecorder
             if (_recorder.IsRecording)
             {
                 _recorder.EndRecording();
-                TextBlockRecordTime.Text = "REC: 00:00:00";
+                TextBlockRecordTime.Text = "00:00:00";
                 CircleRecord.Fill = new SolidColorBrush(Color.FromRgb(124, 77, 150));
                 StopRecordTimer();
             }
@@ -99,11 +99,11 @@ namespace AfronewsRecorder
         private void TimerRecord_Tick(object sender, EventArgs e)
         {
             _recordTime = _recordTime.Add(TimeSpan.FromSeconds(1));
-            TextBlockRecordTime.Text = "REC: " + _recordTime.ToString();
+            TextBlockRecordTime.Text =  _recordTime.ToString();
         }
 
         #endregion
-
+        SettingsWindow _settingsWindow;
         private void ButtonOpenFolder_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -118,8 +118,10 @@ namespace AfronewsRecorder
 
         private void ButtonSettings_Click(object sender, RoutedEventArgs e)
         {
-            SettingsWindow _settingsWindow = new SettingsWindow();
-            _settingsWindow.Show();
+
+            if (_settingsWindow == null)
+                _settingsWindow = new SettingsWindow();
+            _settingsWindow.ShowDialog();
         }
 
     }

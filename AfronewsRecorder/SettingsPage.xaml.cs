@@ -1,20 +1,11 @@
 ﻿using AfronewsRecorder.Structure;
 using Ookii.Dialogs.Wpf;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using ScreenRecorderLib;
 
 namespace AfronewsRecorder
 {
@@ -110,10 +101,20 @@ namespace AfronewsRecorder
         {
 
         }
-
+        
+      
         private void WindowRecord_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            string text = (sender as ComboBox).SelectedItem as string;
+           var window =  ScreenRecorder.Windows.Find(w =>  w.Title == text);
+            if (window != null)
+            {
+                ScreenRecorder.IsWindowRecording = true;
+                ScreenRecorder.WindowHandle = window.Handle;
+            }else
+            {
+                ScreenRecorder.IsWindowRecording = false;
+            }
         }
 
         private void ButtonBrowsePath_Click(object sender, RoutedEventArgs e)
@@ -125,6 +126,16 @@ namespace AfronewsRecorder
                 ScreenRecorder.VideoDirectory = dialog.SelectedPath;
                 TextBlockRecordingPath.Text = "Recording path: " + dialog.SelectedPath;
                 Serializer.SerializeRecordingPath(dialog.SelectedPath);
+            }
+        }
+
+        private void WindowRecord_DropDownOpened(object sender, EventArgs e)
+        {
+            WindowRecord.Items.Clear();
+            ScreenRecorder.Windows = Recorder.GetWindows();
+            foreach(var window in ScreenRecorder.Windows)
+            {
+                WindowRecord.Items.Add(window.Title);
             }
         }
     }
