@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -45,6 +46,35 @@ namespace AfronewsRecorder
 
             stream.Close();
             return recPath;
+        }
+        public static void SerializeAudioOutput(string outputDevice)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream(Path.Combine(DataDirectory, "rec_output_device.alr"), FileMode.OpenOrCreate, FileAccess.Write);
+
+            formatter.Serialize(stream, outputDevice);
+
+            stream.Close();
+        }
+
+        public static string DeserializeAudioOutput()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream(Path.Combine(DataDirectory, "rec_output_device.alr"), FileMode.OpenOrCreate, FileAccess.Read);
+
+            string outputDevice;
+            Trace.WriteLine(stream.Length);
+            if (stream.Length != 0)
+            {
+                outputDevice = (string)formatter.Deserialize(stream);
+            }
+            else
+            {
+                outputDevice = null;
+            }
+
+            stream.Close();
+            return outputDevice;
         }
     }
 }

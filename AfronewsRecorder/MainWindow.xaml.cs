@@ -29,22 +29,8 @@ namespace AfronewsRecorder
         public MainWindow()
         {
             InitializeComponent();
-            InitializeUI();
         }
 
-        private void InitializeUI()
-        {
-            TextBlockRecordTime.Visibility = Visibility.Visible;
-            string recPath = Serializer.DeserializeRecordingPath();
-            //if (recPath != null)
-            //{
-            //    TextBlockRecordingPath.Text = "Recording Path: " + recPath;
-            //}
-            //else
-            //{
-            //    TextBlockRecordingPath.Text = "Recording Path: " + ScreenRecorder.VideoDirectory;
-            //}
-        }
 
         #region titlebar buttons
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
@@ -117,19 +103,6 @@ namespace AfronewsRecorder
         }
 
         #endregion
-
-
-        //private void ButtonBrowse_Click(object sender, RoutedEventArgs e)
-        //{
-        //    VistaFolderBrowserDialog dialog = new VistaFolderBrowserDialog();
-
-        //    if (dialog.ShowDialog().GetValueOrDefault())
-        //    {
-        //        ScreenRecorder.VideoDirectory = dialog.SelectedPath;
-        //        TextBlockRecordingPath.Text = "Recording path: " + dialog.SelectedPath;
-        //        Serializer.SerializeRecordingPath(dialog.SelectedPath);
-        //    }
-        //}
 
         private void ButtonOpenFolder_Click(object sender, RoutedEventArgs e)
         {

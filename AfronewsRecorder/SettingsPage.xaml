@@ -9,7 +9,7 @@
       Title="Settings">
     <Grid Background="#FFEDEFEE">
         <Grid.RowDefinitions>
-            <RowDefinition Height="56"/>
+            <RowDefinition Height="32"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
@@ -74,7 +74,7 @@
                 Cursor="Hand"
                 Foreground="WhiteSmoke"
                 FontSize="14" Click="ButtonBrowsePath_Click"
-                Content="Browse">
+                Content="Change Folder">
 
                 <Button.Resources>
                     <Style x:Key="ButtonBrowsePath" TargetType="{x:Type Button}">
@@ -195,7 +195,6 @@
 
 
 
-        <!--<Border Background="#1BCDCF" Grid.Row="2" Height="1"/>-->
 
     </Grid>
 </Page>

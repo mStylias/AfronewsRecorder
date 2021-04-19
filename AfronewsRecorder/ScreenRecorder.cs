@@ -13,8 +13,14 @@ namespace AfronewsRecorder
 {
     public class ScreenRecorder
     {
+        public static Dictionary<string, string> AudioInputDevices { get => Recorder.GetSystemAudioDevices(AudioDeviceSource.InputDevices); }
+        public static Dictionary<string, string> AudioOutputDevices { get => Recorder.GetSystemAudioDevices(AudioDeviceSource.OutputDevices); }
         public static string RecordingPath { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "AfronewsRecorder", "temp.mp4");
         public static string VideoDirectory { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "AfronewsRecorder");
+        public static string SelectedInputDevice { get { return Options.AudioOptions.AudioInputDevice; } set { Options.AudioOptions.AudioInputDevice = value; } }
+        public static string SelectedOutputDevice { get { return Options.AudioOptions.AudioOutputDevice; } set { Options.AudioOptions.AudioOutputDevice = value; } }
+
+        public List<RecordableWindow> RecordableWindows { get => Recorder.GetWindows(); }
         public bool IsRecording { get; set; } = false;
 
         public static RecorderOptions Options { get; set; } = new RecorderOptions
