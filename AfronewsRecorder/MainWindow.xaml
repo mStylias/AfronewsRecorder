@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:AfronewsRecorder" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:sys="http://schemas.microsoft.com/winfx/2009/xaml"
         mc:Ignorable="d"
         Title="Simple Button Recorder" 
-        Height="325" Width="200" 
+        Height="350" Width="200" 
         WindowStartupLocation="CenterScreen" 
-        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" AllowsTransparency="True" Background="#FFEDEFEE"
         Icon="/record_icon_64.png">
     <Window.Resources>
         <Style x:Key="FocusVisual">
@@ -138,7 +138,7 @@
            
             <RowDefinition Height="32"/>
             <RowDefinition Height="200"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="120"/>
          
         </Grid.RowDefinitions>
         <!--TitleBar-->
@@ -176,18 +176,6 @@
             </StackPanel>
         </Grid>
 
-
-        <Grid Visibility="Visible"
-            Grid.Row="0" Grid.RowSpan="2">
-            <!--<TextBlock 
-                Text="Afronews Recorder" 
-                HorizontalAlignment="Left" 
-                VerticalAlignment="Center"
-                FontSize="30"
-                Foreground="FloralWhite"
-                FontWeight="DemiBold" Grid.ColumnSpan="2" Margin="163,0,0,0"
-            />-->
-        </Grid>
 
 
         <!--record button-->
@@ -239,14 +227,14 @@
             </Grid.RowDefinitions>
             <TextBlock
                     x:Name="TextBlockRecordTime"
-                    d:Text="REC: 00.00.00"
+                    d:Text="REC: 00:00:00"
                     TextWrapping="Wrap"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Margin="8,0,0,0"
                     FontSize="16"
                     FontWeight="DemiBold"
-                    Foreground="WhiteSmoke" Text="REC: 00:00:00"
+                    Foreground="Black" Text="REC: 00:00:00"
                 />
 
             <!--<TextBlock 
@@ -264,6 +252,7 @@
                     <Button Style="{DynamicResource ButtonOpenFolder}"
                         x:Name="ButtonOpenFolder"
                         Width="100" 
+                        Height="25"
                         Background="#8C4852" Foreground="FloralWhite"
                         BorderThickness="0"
                         Cursor="Hand"
@@ -280,11 +269,12 @@
                     <Button Style="{DynamicResource ButtonOpenFolder}"
                         x:Name="ButtonSettings"
                         Width="100" Margin="0,10,0,0"
+                        Height="25"
                         Background="#8C4852" Foreground="FloralWhite"
                         BorderThickness="0"
                         Cursor="Hand"
                         Content="Settings"
-                        Click="ButtonOpenFolder_Click"/>
+                        Click="ButtonSettings_Click"/>
                 </StackPanel>
             </Grid>
         </Grid>

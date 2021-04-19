@@ -75,7 +75,7 @@ namespace AfronewsRecorder
 
         #endregion
 
-
+        #region btnRecord
         ScreenRecorder _recorder = new ScreenRecorder();
         private void ButtonRecord_Click(object sender, RoutedEventArgs e)
         {
@@ -116,6 +116,9 @@ namespace AfronewsRecorder
             TextBlockRecordTime.Text = "REC: " + _recordTime.ToString();
         }
 
+        #endregion
+
+
         //private void ButtonBrowse_Click(object sender, RoutedEventArgs e)
         //{
         //    VistaFolderBrowserDialog dialog = new VistaFolderBrowserDialog();
@@ -140,33 +143,11 @@ namespace AfronewsRecorder
             }
         }
 
-        private void Window_Closing(object sender, CancelEventArgs e)
+        private void ButtonSettings_Click(object sender, RoutedEventArgs e)
         {
-            //TaskDialog taskDialog = new TaskDialog();
-            //taskDialog.WindowTitle = "Recording is active";
-            //taskDialog.Content = "Recording is still in progress. Do you want to exit anyway?";
-            //taskDialog.Buttons.Add(new TaskDialogButton("Yes"));
-            //taskDialog.Buttons.Add(new TaskDialogButton("No"));
-            //taskDialog.ButtonClicked += new EventHandler((sender, e) => TaskDialog_ButtonClicked());
-            //taskDialog.ShowDialog();
-            if (_recorder.IsRecording)
-            {
-                var userResponse = MessageBox.Show("Recording is still in progress. Exit anyway?", "Recording is active", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-                if (userResponse == MessageBoxResult.No)
-                {
-                    e.Cancel = true;
-                }
-                else
-                {
-                    _recorder.EndRecording();
-                    while (_recorder.IsRecording)
-                    {
-                        Thread.Sleep(1000);
-                    }
-
-                }
-            }
-
+            SettingsWindow _settingsWindow = new SettingsWindow();
+            _settingsWindow.Show();
         }
+
     }
 }
