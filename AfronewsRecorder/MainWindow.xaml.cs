@@ -29,6 +29,7 @@ namespace AfronewsRecorder
         public MainWindow()
         {
             InitializeComponent();
+            ScreenRecorder.FramerateInput = 30;
         }
 
 

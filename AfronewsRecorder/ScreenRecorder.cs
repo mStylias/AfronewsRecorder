@@ -28,8 +28,9 @@ namespace AfronewsRecorder
 
         public static IntPtr WindowHandle { get; set; }
 
-        public static int FramerateInput { get; set; }
-
+        public  static int FramerateInput { get; set; }
+        //public static bool IsInputDeviceEnabled { get; set; }
+        //public static bool IsOutputDeviceEnabled { get; set; }
         public static RecorderOptions Options { get; set; } = new RecorderOptions
         {
             RecorderMode = RecorderMode.Video,
@@ -58,7 +59,7 @@ namespace AfronewsRecorder
             {
                 BitrateMode = BitrateControlMode.Quality,
                 Quality = 70,
-                Framerate = FramerateInput,
+                Framerate = 30,
                
                 IsFixedFramerate = true,
                 EncoderProfile = H264Profile.Main

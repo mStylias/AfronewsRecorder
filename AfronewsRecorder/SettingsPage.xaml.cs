@@ -55,6 +55,7 @@ namespace AfronewsRecorder
                  UpdateFramerate();
 
 
+
         }
 
         private void InitializeUI()
@@ -171,7 +172,7 @@ namespace AfronewsRecorder
                 {
                     comboboxText = "30";
                     Settings.Framerate = comboboxText;
-                    ScreenRecorder.FramerateInput = Int32.Parse(comboboxText);
+                    ScreenRecorder.FramerateInput = 30;
                     Serializer.SerializeFramerateInput(comboboxText);
                 }
             }
@@ -196,7 +197,7 @@ namespace AfronewsRecorder
                     framerate = "30";
                     ComboBoxFramerate.SelectedItem = framerate;
                     ComboBoxFramerate.Text = framerate;
-                    ScreenRecorder.FramerateInput = Int32.Parse(framerate);
+                    ScreenRecorder.FramerateInput = 30;
                     Serializer.SerializeFramerateInput(ComboBoxFramerate.Text);
                 }
             }
@@ -237,6 +238,48 @@ namespace AfronewsRecorder
             foreach(var window in ScreenRecorder.Windows)
             {
                 WindowRecord.Items.Add(window.Title);
+            }
+        }
+
+
+
+        private void ToggleButtonOutput_Click(object sender, RoutedEventArgs e)
+        {
+            if ((bool)ToggleButtonOutput.IsChecked)
+            {
+                ScreenRecorder.Options.AudioOptions.IsAudioEnabled = true;
+                ScreenRecorder.Options.AudioOptions.IsOutputDeviceEnabled = true;
+            }
+            else
+            {
+                ScreenRecorder.Options.AudioOptions.IsAudioEnabled = false;
+                ScreenRecorder.Options.AudioOptions.IsOutputDeviceEnabled = false;
+            }
+        }
+
+        private void ToggleButtonInput_Click(object sender, RoutedEventArgs e)
+        {
+            if ((bool)ToggleButtonInput.IsChecked)
+            {
+                ScreenRecorder.Options.AudioOptions.IsAudioEnabled = true;
+                ScreenRecorder.Options.AudioOptions.IsInputDeviceEnabled = true;
+            }
+            else
+            {
+                ScreenRecorder.Options.AudioOptions.IsAudioEnabled = false;
+                ScreenRecorder.Options.AudioOptions.IsInputDeviceEnabled = false;
+            }
+        }
+
+        private void ToggleButtonWindowRecord_Click(object sender, RoutedEventArgs e)
+        {
+            if ((bool)ToggleButtonWindowRecord.IsChecked)
+            {
+                WindowRecord.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                WindowRecord.Visibility = Visibility.Hidden;
             }
         }
     }

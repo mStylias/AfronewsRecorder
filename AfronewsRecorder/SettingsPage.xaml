@@ -55,7 +55,7 @@
         </TextBlock>-->
 
         <!--Record settings section-->
-        <StackPanel Grid.Row="1"  Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="1"  Orientation="Vertical"  HorizontalAlignment="Center">
             <StackPanel  HorizontalAlignment="Center"  Orientation="Horizontal" VerticalAlignment="Center" >
 
                 <TextBlock Text="Record Settings" FontSize="20" FontWeight="DemiBold" Margin="0,15" Foreground="#0E3C6C" TextAlignment="Center" VerticalAlignment="Center"  />
@@ -108,41 +108,58 @@
             </Button>
             
             <!--output device-->
-            <TextBlock
-                Text="Output device" 
-                FontSize="20" FontWeight="DemiBold" 
-                Margin="0,15" Foreground="#0E3C6C" 
-                TextAlignment="Center" VerticalAlignment="Center"
-            />
-
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+                <ToggleButton
+                     x:Name="ToggleButtonOutput"
+                     Style="{StaticResource MaterialDesignSwitchLightToggleButton}"  
+                   IsChecked="True" Click="ToggleButtonOutput_Click" Margin="0,30,0,2"
+                />
+                <TextBlock
+                    Text="Output device" 
+                    FontSize="20" FontWeight="DemiBold" 
+                    Margin="19,30,0,5" Foreground="#0E3C6C" 
+                    TextAlignment="Center" VerticalAlignment="Center"
+                 />
+              </StackPanel>
+                
             <ComboBox
                 x:Name="ComboboxOutputDevice"
                 Style="{StaticResource MaterialDesignComboBox}"
                 wpf:TextFieldAssist.UnderlineBrush="#0E3C6C"
                 BorderBrush="#7C4D96"
                 MaxWidth="300"
-                FontSize="16" SelectionChanged="ComboboxOutputDevice_SelectionChanged"
+                Width="200"
+                FontSize="16" SelectionChanged="ComboboxOutputDevice_SelectionChanged" Margin="0,0,0,20"
                 >
 
                 <ComboBoxItem IsSelected="True">Default</ComboBoxItem>
             </ComboBox>
             
             
-            <!--input device--> 
-            <TextBlock
-                Text="Input device" 
-                FontSize="20" FontWeight="DemiBold" 
-                Margin="0,15" Foreground="#0E3C6C" 
-                TextAlignment="Center" VerticalAlignment="Center"
-            />
+            <!--input device-->
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+                <ToggleButton
+                     x:Name="ToggleButtonInput"
+                     Style="{StaticResource MaterialDesignSwitchLightToggleButton}"  
+                    Click="ToggleButtonInput_Click" Margin="0,15,0,2"
+                />
+                <TextBlock
+                    Text="Input device" 
+                    FontSize="20" FontWeight="DemiBold" 
+                    Margin="19,15,0,5" Foreground="#0E3C6C" 
+                    TextAlignment="Center" VerticalAlignment="Center"
+                 />
+            </StackPanel>
+           
 
             <ComboBox
                 x:Name="ComboboxInputDevice"
                 Style="{StaticResource MaterialDesignComboBox}"
                 wpf:TextFieldAssist.UnderlineBrush="#0E3C6C"
                 BorderBrush="#7C4D96"
+                Width="200"
                 MaxWidth="300"
-                FontSize="16" SelectionChanged="ComboboxInputDevice_SelectionChanged"
+                FontSize="16" SelectionChanged="ComboboxInputDevice_SelectionChanged" Margin="0,0,0,20"
                 >
 
                 <ComboBoxItem IsSelected="True">Default</ComboBoxItem>
@@ -151,43 +168,52 @@
             <!--fps selection-->
             <TextBlock 
                 FontSize="20" FontWeight="DemiBold" 
-                Margin="0,15" Foreground="#0E3C6C" 
+                Margin="0,15,0,5" Foreground="#0E3C6C" 
                 TextAlignment="Center" VerticalAlignment="Center"
-             Text="Frame Rate"/>
+                Text="Frame Rate"
+                />
 
             <ComboBox
                 x:Name="ComboBoxFramerate"
                 Style="{StaticResource MaterialDesignComboBox}"
                 wpf:TextFieldAssist.UnderlineBrush="#0E3C6C"
                 BorderBrush="#7C4D96"
-                MaxWidth="300"
+                Width="50"
+                Margin="0,0,0,35"
                 FontSize="16" SelectionChanged="FPS_SelectionChanged"
                 >
 
                 <ComboBoxItem >30</ComboBoxItem>
                 <ComboBoxItem >45</ComboBoxItem>
                 <ComboBoxItem >60</ComboBoxItem>
+                <ComboBoxItem >120</ComboBoxItem>
             </ComboBox>
             
             <!--window record-->
-            <TextBlock
-                Text="Window Record" 
-                FontSize="20" FontWeight="DemiBold" 
-                Margin="0,15" Foreground="#0E3C6C" 
-                TextAlignment="Center" VerticalAlignment="Center"
-            />
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" >
+                <ToggleButton
+                     x:Name="ToggleButtonWindowRecord"
+                     Style="{StaticResource MaterialDesignSwitchLightToggleButton}"  
+                     Click="ToggleButtonWindowRecord_Click" Margin="0,15,0,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                />
+                <TextBlock
+                    Text="Window Record" 
+                    FontSize="20" FontWeight="DemiBold" 
+                    Margin="19,15,19,5" Foreground="#0E3C6C" 
+                     TextAlignment="Center" VerticalAlignment="Center"
+                />
+            </StackPanel>
 
             <ComboBox
+                d:Visibility="Visible"
                 x:Name="WindowRecord"
                 Style="{StaticResource MaterialDesignComboBox}"
                 wpf:TextFieldAssist.UnderlineBrush="#0E3C6C"
                 BorderBrush="#7C4D96"
                 MaxWidth="300"
-                FontSize="16" SelectionChanged="WindowRecord_SelectionChanged" DropDownOpened="WindowRecord_DropDownOpened"
-                >
-
-                
-            </ComboBox>
+                Width="300"
+                FontSize="16" SelectionChanged="WindowRecord_SelectionChanged" DropDownOpened="WindowRecord_DropDownOpened" Visibility="Hidden"
+                />
 
 
 
