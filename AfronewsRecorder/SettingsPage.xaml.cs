@@ -25,6 +25,7 @@ namespace AfronewsRecorder
         bool _componentsLoaded = false;
         private void LoadData()
         {
+            //output devices
             foreach (var outputDevice in ScreenRecorder.AudioOutputDevices)
             {
                 ComboboxOutputDevice.Items.Add(outputDevice.Value);
@@ -36,6 +37,24 @@ namespace AfronewsRecorder
                 Trace.WriteLine(Settings.AudioOutputDevice);
                 UpdateAudioOutputDevice();
             }
+
+            //input devices
+            foreach (var inputDevice in ScreenRecorder.AudioInputDevices)
+            {
+                ComboboxInputDevice.Items.Add(inputDevice.Value);
+            }
+
+            if (Settings.AudioInputDevice != null)
+            {
+                ComboboxInputDevice.SelectedItem = Settings.AudioInputDevice;
+                Trace.WriteLine(Settings.AudioInputDevice);
+                UpdateAudioInputDevice();
+            }
+
+            if(Settings.Framerate != null)
+                 UpdateFramerate();
+
+
         }
 
         private void InitializeUI()
@@ -43,12 +62,13 @@ namespace AfronewsRecorder
             string recPath = Serializer.DeserializeRecordingPath();
             if (recPath != null)
             {
-               TextBlockRecordingPath.Text = "Recording Path: " + recPath;
+               TextBlockRecordingPath.Text = "Save to: " + recPath;
             }
             else
             {
-                TextBlockRecordingPath.Text = "Recording Path: " + ScreenRecorder.VideoDirectory;
+                TextBlockRecordingPath.Text = "Save to: " + ScreenRecorder.VideoDirectory;
             }
+
         }
 
         private void UpdateAudioOutputDevice()
@@ -66,6 +86,26 @@ namespace AfronewsRecorder
                 else
                 {
                     ScreenRecorder.SelectedOutputDevice = null;
+                    Serializer.SerializeAudioOutput("Default");
+                }
+            }
+        }
+
+        private void UpdateAudioInputDevice()
+        {
+            if (_componentsLoaded)
+            {
+                Trace.WriteLine(ComboboxOutputDevice.Text);
+                string selectedDevice = ScreenRecorder.AudioOutputDevices.FirstOrDefault(x => x.Value == ComboboxOutputDevice.Text).Key;
+
+                if (selectedDevice != null)
+                {
+                    ScreenRecorder.SelectedInputDevice = selectedDevice;
+                    Serializer.SerializeAudioOutput(ComboboxOutputDevice.Text);
+                }
+                else
+                {
+                    ScreenRecorder.SelectedInputDevice = null;
                     Serializer.SerializeAudioOutput("Default");
                 }
             }
@@ -94,26 +134,87 @@ namespace AfronewsRecorder
 
         private void ComboboxInputDevice_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (_componentsLoaded)
+            {
+                string comboboxText = (sender as ComboBox).SelectedItem as string;
+                Trace.WriteLine(comboboxText);
+                string selectedDevice = ScreenRecorder.AudioInputDevices.FirstOrDefault(x => x.Value == comboboxText).Key;
 
+                if (selectedDevice != null)
+                {
+                    ScreenRecorder.SelectedInputDevice = selectedDevice;
+                    Serializer.SerializeAudioInput(comboboxText);
+                }
+                else
+                {
+                    ScreenRecorder.SelectedInputDevice = null;
+                    Serializer.SerializeAudioInput("Default");
+                }
+            }
         }
 
         private void FPS_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (_componentsLoaded)
+            {
+                string comboboxText = (sender as ComboBox).Text as string;
+                Trace.WriteLine(comboboxText);
+              
 
+                if (comboboxText != null)
+                {
+                    Settings.Framerate = comboboxText;
+                    ScreenRecorder.FramerateInput = Int32.Parse(comboboxText);
+                    Serializer.SerializeFramerateInput(comboboxText);
+                }
+                else
+                {
+                    comboboxText = "30";
+                    Settings.Framerate = comboboxText;
+                    ScreenRecorder.FramerateInput = Int32.Parse(comboboxText);
+                    Serializer.SerializeFramerateInput(comboboxText);
+                }
+            }
         }
-        
-      
+
+        private void UpdateFramerate()
+        {
+            if (_componentsLoaded)
+            {
+                Trace.WriteLine(ComboBoxFramerate.Text);
+                string framerate = Settings.Framerate;
+
+                if (framerate != null)
+                {
+                    ComboBoxFramerate.Text = framerate;
+                    ComboBoxFramerate.SelectedItem = framerate;
+                    ScreenRecorder.FramerateInput = Int32.Parse(framerate);
+                    Serializer.SerializeFramerateInput(ComboBoxFramerate.Text);
+                }
+                else
+                {
+                    framerate = "30";
+                    ComboBoxFramerate.SelectedItem = framerate;
+                    ComboBoxFramerate.Text = framerate;
+                    ScreenRecorder.FramerateInput = Int32.Parse(framerate);
+                    Serializer.SerializeFramerateInput(ComboBoxFramerate.Text);
+                }
+            }
+            
+        }
+
+
         private void WindowRecord_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string text = (sender as ComboBox).SelectedItem as string;
-           var window =  ScreenRecorder.Windows.Find(w =>  w.Title == text);
+            var window =  ScreenRecorder.Windows.Find(w =>  w.Title == text);
             if (window != null)
             {
-                ScreenRecorder.IsWindowRecording = true;
+                ScreenRecorder.IsWindowRecordingSelected = true;
                 ScreenRecorder.WindowHandle = window.Handle;
             }else
             {
-                ScreenRecorder.IsWindowRecording = false;
+                ScreenRecorder.IsWindowRecordingSelected = false;
             }
         }
 
@@ -124,7 +225,7 @@ namespace AfronewsRecorder
             if (dialog.ShowDialog().GetValueOrDefault())
             {
                 ScreenRecorder.VideoDirectory = dialog.SelectedPath;
-                TextBlockRecordingPath.Text = "Recording path: " + dialog.SelectedPath;
+                TextBlockRecordingPath.Text = "Save to: " + dialog.SelectedPath;
                 Serializer.SerializeRecordingPath(dialog.SelectedPath);
             }
         }

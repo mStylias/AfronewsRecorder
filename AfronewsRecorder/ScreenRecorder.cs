@@ -16,17 +16,19 @@ namespace AfronewsRecorder
         public static List<RecordableWindow> Windows { get; set; }
         public static Dictionary<string, string> AudioInputDevices { get => Recorder.GetSystemAudioDevices(AudioDeviceSource.InputDevices); }
         public static Dictionary<string, string> AudioOutputDevices { get => Recorder.GetSystemAudioDevices(AudioDeviceSource.OutputDevices); }
-        public static string RecordingPath { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "AfronewsRecorder", "temp.mp4");
-        public static string VideoDirectory { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "AfronewsRecorder");
+        public static string RecordingPath { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OneButtonRecorder", "temp.mp4");
+        public static string VideoDirectory { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "OneButtonRecorder");
         public static string SelectedInputDevice { get { return Options.AudioOptions.AudioInputDevice; } set { Options.AudioOptions.AudioInputDevice = value; } }
         public static string SelectedOutputDevice { get { return Options.AudioOptions.AudioOutputDevice; } set { Options.AudioOptions.AudioOutputDevice = value; } }
 
         public List<RecordableWindow> RecordableWindows { get => Recorder.GetWindows(); }
         public bool IsRecording { get; set; } = false;
 
-        public static bool IsWindowRecording { get; set; } 
+        public static bool IsWindowRecordingSelected { get; set; } 
 
         public static IntPtr WindowHandle { get; set; }
+
+        public static int FramerateInput { get; set; }
 
         public static RecorderOptions Options { get; set; } = new RecorderOptions
         {
@@ -46,7 +48,7 @@ namespace AfronewsRecorder
                 Bitrate = AudioBitrate.bitrate_128kbps,
                 Channels = AudioChannels.Stereo,
                 IsAudioEnabled = true,
-                IsInputDeviceEnabled = false,
+                IsInputDeviceEnabled = true,
                 IsOutputDeviceEnabled = true,
                 AudioInputDevice = null, // Null means default
                 AudioOutputDevice = null
@@ -56,7 +58,8 @@ namespace AfronewsRecorder
             {
                 BitrateMode = BitrateControlMode.Quality,
                 Quality = 70,
-                Framerate = 30,
+                Framerate = FramerateInput,
+               
                 IsFixedFramerate = true,
                 EncoderProfile = H264Profile.Main
             },
@@ -69,7 +72,7 @@ namespace AfronewsRecorder
         public void CreateRecording()
         {
            
-            if (IsWindowRecording)
+            if (IsWindowRecordingSelected)
             {
                 Options.DisplayOptions = new DisplayOptions();
                 Options.DisplayOptions.WindowHandle = WindowHandle;

@@ -10,10 +10,14 @@ namespace AfronewsRecorder.Structure
     {
         public static string VideoDirectory { get; set; } = VideoDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Auto Lecture Recorder");
         public static string AudioOutputDevice { get; set; }
+        public static string AudioInputDevice { get; set; }
+        public static string Framerate { get; set; }
+
 
         static Settings()
         {
-           
+            Framerate = Serializer.DeserializeFramerateInput();
+            AudioInputDevice = Serializer.DeserializeAudioInput();
             AudioOutputDevice = Serializer.DeserializeAudioOutput();
         }
     }

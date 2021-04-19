@@ -62,7 +62,7 @@
 
             </StackPanel>
 
-            <TextBlock x:Name="TextBlockRecordingPath" TextAlignment="Center" VerticalAlignment="Center" FontSize="16">
+            <TextBlock x:Name="TextBlockRecordingPath" MaxWidth="700" TextAlignment="Center" VerticalAlignment="Center" FontSize="16">
                     Save to:
             </TextBlock>
 
@@ -156,7 +156,7 @@
              Text="Frame Rate"/>
 
             <ComboBox
-                x:Name="FramesPerSecond"
+                x:Name="ComboBoxFramerate"
                 Style="{StaticResource MaterialDesignComboBox}"
                 wpf:TextFieldAssist.UnderlineBrush="#0E3C6C"
                 BorderBrush="#7C4D96"
@@ -164,7 +164,9 @@
                 FontSize="16" SelectionChanged="FPS_SelectionChanged"
                 >
 
-                <ComboBoxItem IsSelected="True">Default</ComboBoxItem>
+                <ComboBoxItem >30</ComboBoxItem>
+                <ComboBoxItem >45</ComboBoxItem>
+                <ComboBoxItem >60</ComboBoxItem>
             </ComboBox>
             
             <!--window record-->
