@@ -3,14 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AfronewsRecorder"
+        xmlns:local="clr-namespace:AfronewsRecorder" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:sys="http://schemas.microsoft.com/winfx/2009/xaml"
         mc:Ignorable="d"
-        Title="Afronews Recorder" 
-        Height="620" Width="584" 
+        Title="Simple Button Recorder" 
+        Height="325" Width="200" 
         WindowStartupLocation="CenterScreen" 
         WindowStyle="None" AllowsTransparency="True" Background="Transparent"
-        Icon="/record_icon_64.png" 
-        Closing="Window_Closing">
+        Icon="/record_icon_64.png">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -125,43 +124,75 @@
         </Style>
     </Window.Resources>
 
+    <!--custom titlebar-->
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="32" CornerRadius="0" GlassFrameThickness="70" 
+                          NonClientFrameEdges="None" ResizeBorderThickness="0" UseAeroCaptionButtons="true" />
+    </WindowChrome.WindowChrome>
+
+
+
+
     <Grid>
-
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="75"/>
+           
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="100"/>
+         
         </Grid.RowDefinitions>
+        <!--TitleBar-->
+        <Grid Grid.Row="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+            </Grid.RowDefinitions>
 
-        <Grid Visibility="Hidden"
-            Grid.Row="0">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#00000000"/>
-                    <GradientStop Color="#FF7C4D96" Offset="1"/>
-                </LinearGradientBrush>
-            </Grid.Background>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="177*"/>
-                <ColumnDefinition Width="407*"/>
+
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+
+
             </Grid.ColumnDefinitions>
 
-            <TextBlock 
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0,0">
+                    <GradientStop Color="#8C4852"/>
+                    <GradientStop Color="#7C4D96" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+
+            <!-- Titlebar buttons -->
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.ColumnSpan="3">
+                <Button x:Name="ButtonWindowState" Style="{StaticResource MaterialDesignFlatButton}"
+                            Click="ButtonWindowState_Click" WindowChrome.IsHitTestVisibleInChrome="True" FontSize="10">
+                    <materialDesign:PackIcon x:Name="MinimizeIcon" Kind="WindowMinimize" Foreground="#E6E8E7"/>
+                </Button>
+                <Button x:Name="ButtonExit" Style="{StaticResource MaterialDesignFlatButton}"
+                            Click="ButtonExit_Click" WindowChrome.IsHitTestVisibleInChrome="True" FontSize="10">
+                    <materialDesign:PackIcon x:Name="ExitIcon" Kind="Close" Foreground="#E6E8E7"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+
+        <Grid Visibility="Visible"
+            Grid.Row="0" Grid.RowSpan="2">
+            <!--<TextBlock 
                 Text="Afronews Recorder" 
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Center"
                 FontSize="30"
                 Foreground="FloralWhite"
                 FontWeight="DemiBold" Grid.ColumnSpan="2" Margin="163,0,0,0"
-            />
-
+            />-->
         </Grid>
 
+
+        <!--record button-->
         <Grid Grid.Row="1">
             <Grid>
-
-                <!--<Image Source="/background.png" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="3"/>-->
-
                 <Button Style="{DynamicResource ButtonRecordStyle}" Click="ButtonRecord_Click"
                     x:Name="ButtonRecord"
                     Background="Transparent"
@@ -176,7 +207,7 @@
                                 </GeometryGroup>
                             </Path.Data>
                         </Path>
-                        <Path x:Name="CircleRecord" Width="80" Stretch="Uniform" StrokeThickness="0" Fill="#7C4D96">
+                        <Path x:Name="CircleRecord"  Width="80" Stretch="Uniform" StrokeThickness="0" Fill="#7C4D96">
                             <Path.Data>
                                 <GeometryGroup FillRule="EvenOdd">
                                     <EllipseGeometry RadiusX="60" RadiusY="60" Center="0,0" />
@@ -191,21 +222,34 @@
             </Grid>
         </Grid>
 
-        <Grid Visibility="Hidden"
+
+        <!--third row - settings-->
+        <Grid Visibility="Visible"
             Grid.Row="2">
-            <Grid.Background>
+            <!--<Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF7C4D96"/>
                     <GradientStop Color="#00000000" Offset="1"/>
                 </LinearGradientBrush>
-            </Grid.Background>
+            </Grid.Background>-->
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="1.2*"/>
+                <RowDefinition Height="0.5*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <TextBlock
+                    x:Name="TextBlockRecordTime"
+                    d:Text="REC: 00.00.00"
+                    TextWrapping="Wrap"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="8,0,0,0"
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Foreground="WhiteSmoke" Text="REC: 00:00:00"
+                />
 
-            <TextBlock 
+            <!--<TextBlock 
                 x:Name="TextBlockRecordingPath"
                 Text="Recording path:"
                 TextWrapping="Wrap"
@@ -213,43 +257,36 @@
                 Margin="0,8,0,0"
                 FontSize="18"
                 Foreground="FloralWhite"
-            />
+            />-->
 
-            <Grid Grid.Row="1">
-
-                <TextBlock
-                    x:Name="TextBlockRecordTime"
-                    d:Text="REC: 00.00.00"
-                    TextWrapping="Wrap"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    Margin="8,0,0,0"
-                    FontSize="16"
-                    FontWeight="DemiBold"
-                    Foreground="WhiteSmoke"
-                />
-
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Grid Grid.Row="2" >
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                     <Button Style="{DynamicResource ButtonOpenFolder}"
                         x:Name="ButtonOpenFolder"
-                        Width="100" Margin="0,0,30,8" 
+                        Width="100" 
                         Background="#8C4852" Foreground="FloralWhite"
                         BorderThickness="0"
                         Cursor="Hand"
                         Content="Open Folder"
                         Click="ButtonOpenFolder_Click"/>
-                    <Button Style="{DynamicResource ButtonOpenFolder}"
+                    <!--<Button Style="{DynamicResource ButtonOpenFolder}"
                         x:Name="ButtonBrowse"
                         Width="100" Margin="0,0,0,8" 
                         Background="#8C4852" Foreground="FloralWhite" 
                         BorderThickness="0"
                         Cursor="Hand"
                         Content="Browse"
-                        Click="ButtonBrowse_Click"/>
+                        Click="ButtonBrowse_Click"/>-->
+                    <Button Style="{DynamicResource ButtonOpenFolder}"
+                        x:Name="ButtonSettings"
+                        Width="100" Margin="0,10,0,0"
+                        Background="#8C4852" Foreground="FloralWhite"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Content="Settings"
+                        Click="ButtonOpenFolder_Click"/>
                 </StackPanel>
-
             </Grid>
-
         </Grid>
     </Grid>
 </Window>

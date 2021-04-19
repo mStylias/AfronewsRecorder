@@ -5,5 +5,6 @@
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)screenrecorderlib\3.1.1\build\ScreenRecorderLib.targets" Condition="Exists('$(NuGetPackageRoot)screenrecorderlib\3.1.1\build\ScreenRecorderLib.targets')" />
+    <Import Project="$(NuGetPackageRoot)materialdesignthemes\4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('$(NuGetPackageRoot)materialdesignthemes\4.0.0\build\MaterialDesignThemes.targets')" />
   </ImportGroup>
 </Project>

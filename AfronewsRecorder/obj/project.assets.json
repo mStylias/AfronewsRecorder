@@ -2,6 +2,30 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
+      "MaterialDesignColors/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
+        }
+      },
+      "MaterialDesignThemes/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
       "Ookii.Dialogs.Wpf/3.1.0": {
         "type": "package",
         "compile": {
@@ -23,6 +47,61 @@
     }
   },
   "libraries": {
+    "MaterialDesignColors/2.0.0": {
+      "sha512": "+JoghC3QRK0u9Wul1To1ORjcfTbFTVzFPjJ02H7VREOdNzIIn427e8G9gP9hXu9pm1r2OneLnoCG/lTma5cG2w==",
+      "type": "package",
+      "path": "materialdesigncolors/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/MaterialDesignColors.Icon.png",
+        "lib/net452/MaterialDesignColors.dll",
+        "lib/net452/MaterialDesignColors.pdb",
+        "lib/netcoreapp3.1/MaterialDesignColors.dll",
+        "lib/netcoreapp3.1/MaterialDesignColors.pdb",
+        "materialdesigncolors.2.0.0.nupkg.sha512",
+        "materialdesigncolors.nuspec"
+      ]
+    },
+    "MaterialDesignThemes/4.0.0": {
+      "sha512": "+n5oWHuRiYL/gUw2XfQHCRZqHtU8KbrdurgU0IcO98Zsyhw4BvggodfXY8veRtbjjmM9EJ/sG2yKBrgPOGX4JQ==",
+      "type": "package",
+      "path": "materialdesignthemes/4.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MaterialDesignThemes.targets",
+        "build/Resources/Roboto/Roboto-Black.ttf",
+        "build/Resources/Roboto/Roboto-BlackItalic.ttf",
+        "build/Resources/Roboto/Roboto-Bold.ttf",
+        "build/Resources/Roboto/Roboto-BoldItalic.ttf",
+        "build/Resources/Roboto/Roboto-Italic.ttf",
+        "build/Resources/Roboto/Roboto-Light.ttf",
+        "build/Resources/Roboto/Roboto-LightItalic.ttf",
+        "build/Resources/Roboto/Roboto-Medium.ttf",
+        "build/Resources/Roboto/Roboto-MediumItalic.ttf",
+        "build/Resources/Roboto/Roboto-Regular.ttf",
+        "build/Resources/Roboto/Roboto-Thin.ttf",
+        "build/Resources/Roboto/Roboto-ThinItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Bold.ttf",
+        "build/Resources/Roboto/RobotoCondensed-BoldItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Italic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Light.ttf",
+        "build/Resources/Roboto/RobotoCondensed-LightItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Regular.ttf",
+        "images/MaterialDesignThemes.Icon.png",
+        "lib/net452/MaterialDesignThemes.Wpf.dll",
+        "lib/net452/MaterialDesignThemes.Wpf.pdb",
+        "lib/net452/MaterialDesignThemes.Wpf.xml",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.pdb",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.xml",
+        "materialdesignthemes.4.0.0.nupkg.sha512",
+        "materialdesignthemes.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
     "Ookii.Dialogs.Wpf/3.1.0": {
       "sha512": "EpUWoSLLO1aVkUmo2dPE4xO+zQZRxbp13agbbQzGBL1ACALgCD69cTwdLdPdg2LIsPcZ4uA3iID+YaazdZxyww==",
       "type": "package",
@@ -63,28 +142,29 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
+      "MaterialDesignThemes >= 4.0.0",
       "Ookii.Dialogs.Wpf >= 3.1.0",
       "ScreenRecorderLib >= 3.1.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Michalis\\.nuget\\packages\\": {},
+    "C:\\Users\\kkalo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
+      "projectUniqueName": "C:\\Users\\kkalo\\OneDrive\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
       "projectName": "AfronewsRecorder",
-      "projectPath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
-      "packagesPath": "C:\\Users\\Michalis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\obj\\",
+      "projectPath": "C:\\Users\\kkalo\\OneDrive\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
+      "packagesPath": "C:\\Users\\kkalo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kkalo\\OneDrive\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Michalis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kkalo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -111,6 +191,10 @@
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
         "dependencies": {
+          "MaterialDesignThemes": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
           "Ookii.Dialogs.Wpf": {
             "target": "Package",
             "version": "[3.1.0, )"

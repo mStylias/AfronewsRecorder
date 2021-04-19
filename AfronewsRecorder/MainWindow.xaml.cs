@@ -34,16 +34,47 @@ namespace AfronewsRecorder
 
         private void InitializeUI()
         {
+            TextBlockRecordTime.Visibility = Visibility.Visible;
             string recPath = Serializer.DeserializeRecordingPath();
-            if (recPath != null)
+            //if (recPath != null)
+            //{
+            //    TextBlockRecordingPath.Text = "Recording Path: " + recPath;
+            //}
+            //else
+            //{
+            //    TextBlockRecordingPath.Text = "Recording Path: " + ScreenRecorder.VideoDirectory;
+            //}
+        }
+
+        #region titlebar buttons
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            if (_recorder.IsRecording)
             {
-                TextBlockRecordingPath.Text = "Recording Path: " + recPath;
+                var userResponse = MessageBox.Show("Recording is still in progress. Exit anyway?", "Recording is active", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                if (userResponse == MessageBoxResult.Yes)
+                {
+                    _recorder.EndRecording();
+                    while (_recorder.IsRecording)
+                    {
+                        Thread.Sleep(1000);
+                    }
+                    Application.Current.Shutdown();
+                }
             }
             else
-            {
-                TextBlockRecordingPath.Text = "Recording Path: " + ScreenRecorder.VideoDirectory;
-            }
+                Application.Current.Shutdown();      
+            
         }
+
+
+        private void ButtonWindowState_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        #endregion
+
 
         ScreenRecorder _recorder = new ScreenRecorder();
         private void ButtonRecord_Click(object sender, RoutedEventArgs e)
@@ -85,17 +116,17 @@ namespace AfronewsRecorder
             TextBlockRecordTime.Text = "REC: " + _recordTime.ToString();
         }
 
-        private void ButtonBrowse_Click(object sender, RoutedEventArgs e)
-        {
-            VistaFolderBrowserDialog dialog = new VistaFolderBrowserDialog();
+        //private void ButtonBrowse_Click(object sender, RoutedEventArgs e)
+        //{
+        //    VistaFolderBrowserDialog dialog = new VistaFolderBrowserDialog();
 
-            if (dialog.ShowDialog().GetValueOrDefault())
-            {
-                ScreenRecorder.VideoDirectory = dialog.SelectedPath;
-                TextBlockRecordingPath.Text = "Recording path: " + dialog.SelectedPath;
-                Serializer.SerializeRecordingPath(dialog.SelectedPath);
-            }
-        }
+        //    if (dialog.ShowDialog().GetValueOrDefault())
+        //    {
+        //        ScreenRecorder.VideoDirectory = dialog.SelectedPath;
+        //        TextBlockRecordingPath.Text = "Recording path: " + dialog.SelectedPath;
+        //        Serializer.SerializeRecordingPath(dialog.SelectedPath);
+        //    }
+        //}
 
         private void ButtonOpenFolder_Click(object sender, RoutedEventArgs e)
         {
@@ -132,9 +163,10 @@ namespace AfronewsRecorder
                     {
                         Thread.Sleep(1000);
                     }
+
                 }
             }
-           
+
         }
     }
 }
