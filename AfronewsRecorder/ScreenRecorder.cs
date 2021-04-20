@@ -29,8 +29,9 @@ namespace AfronewsRecorder
         public static IntPtr WindowHandle { get; set; }
 
         public  static int FramerateInput { get; set; }
-        //public static bool IsInputDeviceEnabled { get; set; }
-        //public static bool IsOutputDeviceEnabled { get; set; }
+
+        public static bool IsInputDeviceEnabled { get { return Options.AudioOptions.IsInputDeviceEnabled; } set { Options.AudioOptions.IsInputDeviceEnabled = value; } }
+        public static bool IsOutputDeviceEnabled { get { return Options.AudioOptions.IsOutputDeviceEnabled; } set { Options.AudioOptions.IsOutputDeviceEnabled = value; } }
         public static RecorderOptions Options { get; set; } = new RecorderOptions
         {
             RecorderMode = RecorderMode.Video,

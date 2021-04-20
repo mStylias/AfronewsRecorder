@@ -183,7 +183,7 @@
                 FontSize="16" SelectionChanged="FPS_SelectionChanged"
                 >
 
-                <ComboBoxItem >30</ComboBoxItem>
+                <ComboBoxItem IsSelected="True">30</ComboBoxItem>
                 <ComboBoxItem >45</ComboBoxItem>
                 <ComboBoxItem >60</ComboBoxItem>
                 <ComboBoxItem >120</ComboBoxItem>

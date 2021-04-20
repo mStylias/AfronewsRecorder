@@ -122,6 +122,7 @@ namespace AfronewsRecorder
 
             if (_settingsWindow == null)
                 _settingsWindow = new SettingsWindow();
+
             _settingsWindow.ShowDialog();
         }
 

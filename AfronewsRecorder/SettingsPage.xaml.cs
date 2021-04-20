@@ -34,7 +34,7 @@ namespace AfronewsRecorder
             if (Settings.AudioOutputDevice != null)
             {
                 ComboboxOutputDevice.SelectedItem = Settings.AudioOutputDevice;
-                Trace.WriteLine(Settings.AudioOutputDevice);
+                Trace.WriteLine("Audio output device: " + Settings.AudioOutputDevice);
                 UpdateAudioOutputDevice();
             }
 
@@ -47,14 +47,13 @@ namespace AfronewsRecorder
             if (Settings.AudioInputDevice != null)
             {
                 ComboboxInputDevice.SelectedItem = Settings.AudioInputDevice;
-                Trace.WriteLine(Settings.AudioInputDevice);
+                Trace.WriteLine("Audio input device: " + Settings.AudioInputDevice);
                 UpdateAudioInputDevice();
             }
 
+            // framerate
             if(Settings.Framerate != null)
                  UpdateFramerate();
-
-
 
         }
 
@@ -76,7 +75,6 @@ namespace AfronewsRecorder
         {
             if (_componentsLoaded)
             {
-                Trace.WriteLine(ComboboxOutputDevice.Text);
                 string selectedDevice = ScreenRecorder.AudioOutputDevices.FirstOrDefault(x => x.Value == ComboboxOutputDevice.Text).Key;
 
                 if (selectedDevice != null)
@@ -96,7 +94,6 @@ namespace AfronewsRecorder
         {
             if (_componentsLoaded)
             {
-                Trace.WriteLine(ComboboxOutputDevice.Text);
                 string selectedDevice = ScreenRecorder.AudioOutputDevices.FirstOrDefault(x => x.Value == ComboboxOutputDevice.Text).Key;
 
                 if (selectedDevice != null)
@@ -117,7 +114,6 @@ namespace AfronewsRecorder
             if (_componentsLoaded)
             {
                 string comboboxText = (sender as ComboBox).SelectedItem as string;
-                Trace.WriteLine(comboboxText);
                 string selectedDevice = ScreenRecorder.AudioOutputDevices.FirstOrDefault(x => x.Value == comboboxText).Key;
 
                 if (selectedDevice != null)
@@ -138,7 +134,6 @@ namespace AfronewsRecorder
             if (_componentsLoaded)
             {
                 string comboboxText = (sender as ComboBox).SelectedItem as string;
-                Trace.WriteLine(comboboxText);
                 string selectedDevice = ScreenRecorder.AudioInputDevices.FirstOrDefault(x => x.Value == comboboxText).Key;
 
                 if (selectedDevice != null)
@@ -158,9 +153,9 @@ namespace AfronewsRecorder
         {
             if (_componentsLoaded)
             {
-                string comboboxText = (sender as ComboBox).Text as string;
-                Trace.WriteLine(comboboxText);
-              
+                string comboboxText = ((sender as ComboBox).SelectedItem as ComboBoxItem).Content as string;
+                Trace.WriteLine("Combobox text is: " + comboboxText);
+                
 
                 if (comboboxText != null)
                 {
@@ -182,23 +177,21 @@ namespace AfronewsRecorder
         {
             if (_componentsLoaded)
             {
-                Trace.WriteLine(ComboBoxFramerate.Text);
+                Trace.WriteLine("Framerate " + ComboBoxFramerate.Text);
                 string framerate = Settings.Framerate;
 
-                if (framerate != null)
+                if (!string.IsNullOrEmpty(Settings.Framerate))
                 {
-                    ComboBoxFramerate.Text = framerate;
-                    ComboBoxFramerate.SelectedItem = framerate;
+                    (ComboBoxFramerate.SelectedItem as ComboBoxItem).Content = framerate;
                     ScreenRecorder.FramerateInput = Int32.Parse(framerate);
-                    Serializer.SerializeFramerateInput(ComboBoxFramerate.Text);
+                    Serializer.SerializeFramerateInput(framerate);
                 }
                 else
                 {
                     framerate = "30";
-                    ComboBoxFramerate.SelectedItem = framerate;
-                    ComboBoxFramerate.Text = framerate;
+                    (ComboBoxFramerate.SelectedItem as ComboBoxItem).Content = framerate;
                     ScreenRecorder.FramerateInput = 30;
-                    Serializer.SerializeFramerateInput(ComboBoxFramerate.Text);
+                    Serializer.SerializeFramerateInput(framerate);
                 }
             }
             
@@ -247,13 +240,11 @@ namespace AfronewsRecorder
         {
             if ((bool)ToggleButtonOutput.IsChecked)
             {
-                ScreenRecorder.Options.AudioOptions.IsAudioEnabled = true;
-                ScreenRecorder.Options.AudioOptions.IsOutputDeviceEnabled = true;
+                ScreenRecorder.IsOutputDeviceEnabled = true;
             }
             else
             {
-                ScreenRecorder.Options.AudioOptions.IsAudioEnabled = false;
-                ScreenRecorder.Options.AudioOptions.IsOutputDeviceEnabled = false;
+                ScreenRecorder.IsInputDeviceEnabled = false;
             }
         }
 
@@ -261,13 +252,11 @@ namespace AfronewsRecorder
         {
             if ((bool)ToggleButtonInput.IsChecked)
             {
-                ScreenRecorder.Options.AudioOptions.IsAudioEnabled = true;
-                ScreenRecorder.Options.AudioOptions.IsInputDeviceEnabled = true;
+                ScreenRecorder.IsInputDeviceEnabled = true;
             }
             else
             {
-                ScreenRecorder.Options.AudioOptions.IsAudioEnabled = false;
-                ScreenRecorder.Options.AudioOptions.IsInputDeviceEnabled = false;
+                ScreenRecorder.IsInputDeviceEnabled = false;
             }
         }
 
