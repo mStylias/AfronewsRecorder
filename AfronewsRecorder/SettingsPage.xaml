@@ -108,19 +108,29 @@
             </Button>
             
             <!--output device-->
-            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+            <Grid Margin="0,15,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
                 <ToggleButton
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,15,3"
                      x:Name="ToggleButtonOutput"
                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"  
-                   IsChecked="True" Click="ToggleButtonOutput_Click" Margin="0,30,0,2"
+                   IsChecked="True" Click="ToggleButtonOutput_Click" 
                 />
                 <TextBlock
+                    Grid.Column="2"
                     Text="Output device" 
                     FontSize="20" FontWeight="DemiBold" 
-                    Margin="19,30,0,5" Foreground="#0E3C6C" 
-                    TextAlignment="Center" VerticalAlignment="Center"
+                    Foreground="#0E3C6C" 
+                    TextAlignment="Center" HorizontalAlignment="Left"
                  />
-              </StackPanel>
+              </Grid>
                 
             <ComboBox
                 x:Name="ComboboxOutputDevice"
@@ -137,19 +147,30 @@
             
             
             <!--input device-->
-            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
                 <ToggleButton
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,15,3"
                      x:Name="ToggleButtonInput"
                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"  
-                    Click="ToggleButtonInput_Click" Margin="0,15,0,2"
+                    Click="ToggleButtonInput_Click"
                 />
                 <TextBlock
+                    Grid.Column="2"
                     Text="Input device" 
                     FontSize="20" FontWeight="DemiBold" 
-                    Margin="19,15,0,5" Foreground="#0E3C6C" 
-                    TextAlignment="Center" VerticalAlignment="Center"
+                    Foreground="#0E3C6C" 
+                    Margin="10,0,0,0"
+                    TextAlignment="Center" HorizontalAlignment="Left"
                  />
-            </StackPanel>
+            </Grid>
            
 
             <ComboBox
@@ -183,10 +204,10 @@
                 FontSize="16" SelectionChanged="FPS_SelectionChanged"
                 >
 
-                <ComboBoxItem IsSelected="True">30</ComboBoxItem>
-                <ComboBoxItem >45</ComboBoxItem>
-                <ComboBoxItem >60</ComboBoxItem>
-                <ComboBoxItem >120</ComboBoxItem>
+                <ComboBoxItem IsSelected="True"> 30 </ComboBoxItem>
+                <ComboBoxItem > 45 </ComboBoxItem>
+                <ComboBoxItem > 60 </ComboBoxItem>
+                <ComboBoxItem > 120 </ComboBoxItem>
             </ComboBox>
             
             <!--window record-->

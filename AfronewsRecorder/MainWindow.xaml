@@ -150,7 +150,7 @@
 
             <Grid.ColumnDefinitions>
 
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10*"/>
                 <ColumnDefinition Width="auto"/>
 
 
