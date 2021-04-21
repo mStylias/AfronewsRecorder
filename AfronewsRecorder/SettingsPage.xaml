@@ -66,7 +66,7 @@
                     Save to:
             </TextBlock>
 
-            <Button Style="{DynamicResource ButtonBrowsePath}"
+            <Button Style="{StaticResource MaterialDesignFlatLightBgButton}"
                 x:Name="ButtonBrowsePath"
                 Margin="0,10,0,0"
                 Width="200"
@@ -74,39 +74,9 @@
                 Cursor="Hand"
                 Foreground="WhiteSmoke"
                 FontSize="14" Click="ButtonBrowsePath_Click"
-                Content="Change Folder">
+                Content="Change Folder" Background="#FF7C4D96"/>
 
-                <Button.Resources>
-                    <Style x:Key="ButtonBrowsePath" TargetType="{x:Type Button}">
-                        <Setter Property="Background" Value="#8C4852"/>
-                        <Setter Property="BorderThickness" Value="0"/>
-                        <Setter Property="Margin" Value="0,20,0,0"/>
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="{x:Type Button}">
 
-                                    <Border x:Name="border" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
-                                        <ContentPresenter 
-                                x:Name="contentPresenter" 
-                                Focusable="False" 
-                                HorizontalAlignment="Center" 
-                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
-                                VerticalAlignment="Center"/>
-                                    </Border>
-
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="true">
-                                            <Setter Property="Background" TargetName="border" Value="#FF204D72"/>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Resources>
-            </Button>
-            
             <!--output device-->
             <Grid Margin="0,15,0,0">
                 <Grid.ColumnDefinitions>
@@ -117,11 +87,11 @@
                 <ToggleButton
                     Grid.Column="1"
                     HorizontalAlignment="Left"
-                    VerticalAlignment="Bottom"
-                    Margin="0,0,15,3"
+                    VerticalAlignment="Top"
+                    Margin="0,6,0,0"
                      x:Name="ToggleButtonOutput"
                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"  
-                   IsChecked="True" Click="ToggleButtonOutput_Click" 
+                   IsChecked="True" Click="ToggleButtonOutput_Click" Background="#FF7C4D96" 
                 />
                 <TextBlock
                     Grid.Column="2"
@@ -130,12 +100,12 @@
                     Foreground="#0E3C6C" 
                     TextAlignment="Center" HorizontalAlignment="Left"
                  />
-              </Grid>
-                
+            </Grid>
+
             <ComboBox
                 x:Name="ComboboxOutputDevice"
                 Style="{StaticResource MaterialDesignComboBox}"
-                wpf:TextFieldAssist.UnderlineBrush="#0E3C6C"
+                wpf:TextFieldAssist.UnderlineBrush="#FF9A67EA"
                 BorderBrush="#7C4D96"
                 MaxWidth="300"
                 Width="200"
@@ -144,8 +114,8 @@
 
                 <ComboBoxItem IsSelected="True">Default</ComboBoxItem>
             </ComboBox>
-            
-            
+
+
             <!--input device-->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -160,7 +130,7 @@
                     Margin="0,0,15,3"
                      x:Name="ToggleButtonInput"
                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"  
-                    Click="ToggleButtonInput_Click"
+                    Click="ToggleButtonInput_Click" Background="#FF7C4D96"
                 />
                 <TextBlock
                     Grid.Column="2"
@@ -171,16 +141,16 @@
                     TextAlignment="Center" HorizontalAlignment="Left"
                  />
             </Grid>
-           
+
 
             <ComboBox
                 x:Name="ComboboxInputDevice"
                 Style="{StaticResource MaterialDesignComboBox}"
-                wpf:TextFieldAssist.UnderlineBrush="#0E3C6C"
+                wpf:TextFieldAssist.UnderlineBrush="#FF9A67EA"
                 BorderBrush="#7C4D96"
                 Width="200"
                 MaxWidth="300"
-                FontSize="16" SelectionChanged="ComboboxInputDevice_SelectionChanged" Margin="0,0,0,20"
+                FontSize="16" SelectionChanged="ComboboxInputDevice_SelectionChanged" Margin="0,0,0,20" Visibility="Hidden"
                 >
 
                 <ComboBoxItem IsSelected="True">Default</ComboBoxItem>
@@ -197,25 +167,25 @@
             <ComboBox
                 x:Name="ComboBoxFramerate"
                 Style="{StaticResource MaterialDesignComboBox}"
-                wpf:TextFieldAssist.UnderlineBrush="#0E3C6C"
+                wpf:TextFieldAssist.UnderlineBrush="#FF9A67EA"
                 BorderBrush="#7C4D96"
                 Width="50"
                 Margin="0,0,0,35"
                 FontSize="16" SelectionChanged="FPS_SelectionChanged"
                 >
 
-                <ComboBoxItem IsSelected="True"> 30 </ComboBoxItem>
+                <!--<ComboBoxItem IsSelected="False"> 30 </ComboBoxItem>
                 <ComboBoxItem > 45 </ComboBoxItem>
                 <ComboBoxItem > 60 </ComboBoxItem>
-                <ComboBoxItem > 120 </ComboBoxItem>
+                <ComboBoxItem > 120 </ComboBoxItem>-->
             </ComboBox>
-            
+
             <!--window record-->
             <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" >
                 <ToggleButton
                      x:Name="ToggleButtonWindowRecord"
                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"  
-                     Click="ToggleButtonWindowRecord_Click" Margin="0,15,0,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                     Click="ToggleButtonWindowRecord_Click" Margin="0,15,0,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF7C4D96"
                 />
                 <TextBlock
                     Text="Window Record" 
@@ -229,7 +199,7 @@
                 d:Visibility="Visible"
                 x:Name="WindowRecord"
                 Style="{StaticResource MaterialDesignComboBox}"
-                wpf:TextFieldAssist.UnderlineBrush="#0E3C6C"
+                wpf:TextFieldAssist.UnderlineBrush="#FF9A67EA"
                 BorderBrush="#7C4D96"
                 MaxWidth="300"
                 Width="300"

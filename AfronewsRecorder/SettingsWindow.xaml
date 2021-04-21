@@ -15,7 +15,7 @@
     <!--custom titlebar-->
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="32" CornerRadius="0" GlassFrameThickness="70" 
-                          NonClientFrameEdges="None" ResizeBorderThickness="0" UseAeroCaptionButtons="true" />
+                          NonClientFrameEdges="None" ResizeBorderThickness="0" UseAeroCaptionButtons="False" />
     </WindowChrome.WindowChrome>
 
     <Grid>
@@ -26,22 +26,15 @@
             </Grid.RowDefinitions>
             <!--TitleBar-->
             <Grid Grid.Row="0" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="32"/>
-                </Grid.RowDefinitions>
-
                 <Grid.ColumnDefinitions>
-
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
-
-
                 </Grid.ColumnDefinitions>
 
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0,0">
-                        <GradientStop Color="#8C4852"/>
-                        <GradientStop Color="#7C4D96" Offset="1"/>
+                        <GradientStop Color="#FF7C4D96" Offset="0.2"/>
+                        <GradientStop Color="#7C4D96" Offset="1.87"/>
                     </LinearGradientBrush>
                 </Grid.Background>
 
@@ -60,6 +53,7 @@
                             Click="ButtonWindowState_Click" WindowChrome.IsHitTestVisibleInChrome="True" FontSize="10">
                         <materialDesign:PackIcon x:Name="MinimizeIcon" Kind="WindowMinimize" Foreground="#E6E8E7"/>
                     </Button>
+                   
                     <Button x:Name="ButtonExit" Style="{StaticResource MaterialDesignFlatButton}"
                             Click="ButtonExit_Click" WindowChrome.IsHitTestVisibleInChrome="True" FontSize="10">
                         <materialDesign:PackIcon x:Name="ExitIcon" Kind="Close" Foreground="#E6E8E7"/>

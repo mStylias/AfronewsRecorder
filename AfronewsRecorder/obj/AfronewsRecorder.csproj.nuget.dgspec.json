@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj": {}
+    "C:\\Users\\kkalo\\OneDrive\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj": {
+    "C:\\Users\\kkalo\\OneDrive\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
+        "projectUniqueName": "C:\\Users\\kkalo\\OneDrive\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
         "projectName": "AfronewsRecorder",
-        "projectPath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
-        "packagesPath": "C:\\Users\\Michalis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\obj\\",
+        "projectPath": "C:\\Users\\kkalo\\OneDrive\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
+        "packagesPath": "C:\\Users\\kkalo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kkalo\\OneDrive\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Michalis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kkalo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -75,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

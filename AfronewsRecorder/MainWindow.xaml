@@ -6,15 +6,16 @@
         xmlns:local="clr-namespace:AfronewsRecorder" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:sys="http://schemas.microsoft.com/winfx/2009/xaml"
         mc:Ignorable="d"
         Title="Simple Button Recorder" 
-        Height="350" Width="200" 
+        Height="500" Width="500" 
         WindowStartupLocation="CenterScreen" 
         WindowStyle="SingleBorderWindow" Background="#FFEDEFEE"
         Icon="/record_icon_64.png" ResizeMode="CanMinimize">
     <!--custom titlebar-->
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="32" CornerRadius="0" GlassFrameThickness="70" 
-                          NonClientFrameEdges="None" ResizeBorderThickness="0" UseAeroCaptionButtons="true" />
+                          NonClientFrameEdges="None" ResizeBorderThickness="0" UseAeroCaptionButtons="False" />
     </WindowChrome.WindowChrome>
+
 
     <Window.Resources>
         <Style x:Key="FocusVisual">
@@ -57,7 +58,7 @@
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="#9b505b"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
-                            </Trigger>
+                            </Trigger>                                                                                                                      
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="#9b505b"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
@@ -138,37 +139,39 @@
         <Grid.RowDefinitions>
            
             <RowDefinition Height="32"/>
-            <RowDefinition Height="200"/>
+            <RowDefinition Height="300"/>
             <RowDefinition Height="120"/>
          
         </Grid.RowDefinitions>
         <!--TitleBar-->
         <Grid Grid.Row="0" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="32"/>
-            </Grid.RowDefinitions>
-
             <Grid.ColumnDefinitions>
-
-                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="auto"/>
-
-
             </Grid.ColumnDefinitions>
 
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0,0">
-                    <GradientStop Color="#8C4852"/>
+                    <GradientStop Color="#FF7C4D96" Offset="1" />
                     <GradientStop Color="#7C4D96" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
 
+            <StackPanel Grid.Column="0"  Grid.ColumnSpan="1">
+                <TextBlock   
+                FontSize="20" FontWeight="Regular" 
+                Margin="5,0,0,0" Foreground="WhiteSmoke" 
+                TextAlignment="Left" VerticalAlignment="Center" HorizontalAlignment="Left"
+                Text="One Button Recorder"
+                />
+            </StackPanel>
 
             <!-- Titlebar buttons -->
-            <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.ColumnSpan="3">
+            <StackPanel Grid.Column="1" Orientation="Horizontal" >
+              
                 <Button x:Name="ButtonWindowState" Style="{StaticResource MaterialDesignFlatButton}"
                             Click="ButtonWindowState_Click" WindowChrome.IsHitTestVisibleInChrome="True" FontSize="10">
-                    <materialDesign:PackIcon x:Name="MinimizeIcon" Kind="WindowMinimize" Foreground="#E6E8E7"/>
+                    <materialDesign:PackIcon x:Name="MinimizeIcon" Kind="WindowMinimize" Foreground="#E6E8E7" FontSize="1"/>
                 </Button>
                 <Button x:Name="ButtonExit" Style="{StaticResource MaterialDesignFlatButton}"
                             Click="ButtonExit_Click" WindowChrome.IsHitTestVisibleInChrome="True" FontSize="10">
@@ -188,9 +191,6 @@
                     BorderThickness="0"
                     Cursor="Hand">
                     <Grid Background="Transparent" >
-                       
-
-
                         <Path Width="160" Stretch="Uniform"  StrokeThickness="0" Fill="#8C4852">
                             <Path.Data>
                                 <GeometryGroup FillRule="EvenOdd">
@@ -199,7 +199,7 @@
                                 </GeometryGroup>
                             </Path.Data>
                         </Path>
-                        <Path x:Name="CircleRecord"  Width="80" Stretch="Uniform" StrokeThickness="0" Fill="#7C4D96">
+                        <Path x:Name="CircleRecord"  Width="80" Stretch="Uniform" StrokeThickness="0" Fill="#FF7C4D96">
                             <Path.Data>
                                 <GeometryGroup FillRule="EvenOdd">
                                     <EllipseGeometry RadiusX="60" RadiusY="60" Center="0,0" />
@@ -219,13 +219,6 @@
         <!--third row - settings-->
         <Grid Visibility="Visible"
             Grid.Row="2">
-            <!--<Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF7C4D96"/>
-                    <GradientStop Color="#00000000" Offset="1"/>
-                </LinearGradientBrush>
-            </Grid.Background>-->
-
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.5*"/>
                 <RowDefinition Height="*"/>
@@ -237,49 +230,33 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Margin="8,0,0,0"
-                    FontSize="16"
+                    FontSize="18"
                     FontWeight="DemiBold"
                     Foreground="Black" Text="00:00:00"
                 />
 
-            <!--<TextBlock 
-                x:Name="TextBlockRecordingPath"
-                Text="Recording path:"
-                TextWrapping="Wrap"
-                HorizontalAlignment="Center"
-                Margin="0,8,0,0"
-                FontSize="18"
-                Foreground="FloralWhite"
-            />-->
-
             <Grid Grid.Row="2" >
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                    <Button Style="{DynamicResource ButtonOpenFolder}"
+                    <Button Style="{StaticResource MaterialDesignFlatLightBgButton}"
                         x:Name="ButtonOpenFolder"
-                        Width="100" 
-                        Height="25"
-                        Background="#8C4852" Foreground="FloralWhite"
+                        Width="120" 
+                        Height="30"
+                        Foreground="FloralWhite"
                         BorderThickness="0"
                         Cursor="Hand"
                         Content="Open Folder"
-                        Click="ButtonOpenFolder_Click"/>
-                    <!--<Button Style="{DynamicResource ButtonOpenFolder}"
-                        x:Name="ButtonBrowse"
-                        Width="100" Margin="0,0,0,8" 
-                        Background="#8C4852" Foreground="FloralWhite" 
-                        BorderThickness="0"
-                        Cursor="Hand"
-                        Content="Browse"
-                        Click="ButtonBrowse_Click"/>-->
-                    <Button Style="{DynamicResource ButtonOpenFolder}"
+                        Click="ButtonOpenFolder_Click" Background="#FF7C4D96"/>
+                    <Button Style="{StaticResource MaterialDesignFlatLightBgButton}"
                         x:Name="ButtonSettings"
-                        Width="100" Margin="0,10,0,0"
-                        Height="25"
-                        Background="#8C4852" Foreground="FloralWhite"
-                        BorderThickness="0"
+                        Width="120" Margin="0,10,0,0"
+                        Height="30"
+                        BorderThickness="0"                                             
                         Cursor="Hand"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Foreground="FloralWhite"
                         Content="Settings"
-                        Click="ButtonSettings_Click"/>
+                        Click="ButtonSettings_Click" Background="#FF7C4D96"/>
                 </StackPanel>
             </Grid>
         </Grid>

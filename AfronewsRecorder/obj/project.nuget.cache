@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+3y4f8HjVt+Jw11QeBiFZoRlPCgMQ4Ve7S7LqgUGyvTRbwtHNnvG33xkodVJeIMA5gluY857L0ZIQRiB2hcakw==",
+  "dgSpecHash": "8SRQR7NtiY9jshomY/KUjvBkeI1eHgBkhCA9naU5jAWIsVVeSQ905sfFTFwt7R5ss2XbaYB9aTGM0TIPg7UeIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
+  "projectFilePath": "C:\\Users\\kkalo\\OneDrive\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Michalis\\.nuget\\packages\\materialdesigncolors\\2.0.0\\materialdesigncolors.2.0.0.nupkg.sha512",
-    "C:\\Users\\Michalis\\.nuget\\packages\\materialdesignthemes\\4.0.0\\materialdesignthemes.4.0.0.nupkg.sha512",
-    "C:\\Users\\Michalis\\.nuget\\packages\\ookii.dialogs.wpf\\3.1.0\\ookii.dialogs.wpf.3.1.0.nupkg.sha512",
-    "C:\\Users\\Michalis\\.nuget\\packages\\screenrecorderlib\\3.1.1\\screenrecorderlib.3.1.1.nupkg.sha512"
+    "C:\\Users\\kkalo\\.nuget\\packages\\materialdesigncolors\\2.0.0\\materialdesigncolors.2.0.0.nupkg.sha512",
+    "C:\\Users\\kkalo\\.nuget\\packages\\materialdesignthemes\\4.0.0\\materialdesignthemes.4.0.0.nupkg.sha512",
+    "C:\\Users\\kkalo\\.nuget\\packages\\ookii.dialogs.wpf\\3.1.0\\ookii.dialogs.wpf.3.1.0.nupkg.sha512",
+    "C:\\Users\\kkalo\\.nuget\\packages\\screenrecorderlib\\3.1.1\\screenrecorderlib.3.1.1.nupkg.sha512"
   ],
   "logs": []
 }

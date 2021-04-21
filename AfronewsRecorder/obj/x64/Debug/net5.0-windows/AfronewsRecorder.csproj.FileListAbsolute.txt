@@ -60,3 +60,7 @@ C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Deb
 C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\SettingsWindow.g.cs
 C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\App.baml
 C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\SettingsWindow.baml
+C:\Users\kkalo\OneDrive\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\SettingsPage.baml
+C:\Users\kkalo\OneDrive\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\SettingsPage.g.cs
+C:\Users\kkalo\OneDrive\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\SettingsWindow.g.cs
+C:\Users\kkalo\OneDrive\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\SettingsWindow.baml

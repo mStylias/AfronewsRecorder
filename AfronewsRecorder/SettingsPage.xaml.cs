@@ -1,11 +1,11 @@
 ﻿using AfronewsRecorder.Structure;
 using Ookii.Dialogs.Wpf;
+using ScreenRecorderLib;
 using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using ScreenRecorderLib;
 
 namespace AfronewsRecorder
 {
@@ -51,9 +51,13 @@ namespace AfronewsRecorder
                 UpdateAudioInputDevice();
             }
 
-            // framerate
-            if(Settings.Framerate != null)
-                 UpdateFramerate();
+            ComboBoxFramerate.Items.Add("30");
+            ComboBoxFramerate.Items.Add("45");
+            ComboBoxFramerate.Items.Add("60");
+            ComboBoxFramerate.Items.Add("120");
+
+            if (Settings.Framerate != null)
+               UpdateFramerate(ComboBoxFramerate);
 
         }
 
@@ -153,46 +157,35 @@ namespace AfronewsRecorder
         {
             if (_componentsLoaded)
             {
-                string comboboxText = ((sender as ComboBox).SelectedItem as ComboBoxItem).Content as string;
-                Trace.WriteLine("Combobox text is: " + comboboxText);
-                
+                string text = (sender as ComboBox).SelectedItem as string;
+                Trace.WriteLine("Combobox text is: " + text);
 
-                if (comboboxText != null)
+
+                if (!string.IsNullOrEmpty(text))
                 {
-                    Settings.Framerate = comboboxText;
-                    ScreenRecorder.FramerateInput = Int32.Parse(comboboxText);
-                    Serializer.SerializeFramerateInput(comboboxText);
+                    Settings.Framerate = text;
+                    ComboBoxFramerate.SelectedItem = text;
+                    ScreenRecorder.FramerateInput = Int32.Parse(text);
+                    Serializer.SerializeFramerateInput(text);
                 }
-                else
-                {
-                    comboboxText = "30";
-                    Settings.Framerate = comboboxText;
-                    ScreenRecorder.FramerateInput = 30;
-                    Serializer.SerializeFramerateInput(comboboxText);
-                }
+                //else
+                //{
+                //    Settings.Framerate = "30";
+                //    ComboBoxFramerate.SelectedItem = Settings.Framerate;
+                //    ScreenRecorder.FramerateInput = Int32.Parse(Settings.Framerate);
+                //    Serializer.SerializeFramerateInput(Settings.Framerate);
+                //}
             }
         }
 
-        private void UpdateFramerate()
+        private void UpdateFramerate(object sender)
         {
             if (_componentsLoaded)
-            {
-                Trace.WriteLine("Framerate " + ComboBoxFramerate.Text);
-                string framerate = Settings.Framerate;
-
-                if (!string.IsNullOrEmpty(Settings.Framerate))
-                {
-                    (ComboBoxFramerate.SelectedItem as ComboBoxItem).Content = framerate;
-                    ScreenRecorder.FramerateInput = Int32.Parse(framerate);
-                    Serializer.SerializeFramerateInput(framerate);
-                }
-                else
-                {
-                    framerate = "30";
-                    (ComboBoxFramerate.SelectedItem as ComboBoxItem).Content = framerate;
-                    ScreenRecorder.FramerateInput = 30;
-                    Serializer.SerializeFramerateInput(framerate);
-                }
+            { 
+                Trace.WriteLine("Framerate " + ComboBoxFramerate.Text);        
+                ComboBoxFramerate.SelectedItem = Settings.Framerate;
+                ScreenRecorder.FramerateInput = Int32.Parse(Settings.Framerate);
+                Serializer.SerializeFramerateInput(Settings.Framerate);
             }
             
         }
@@ -240,10 +233,12 @@ namespace AfronewsRecorder
         {
             if ((bool)ToggleButtonOutput.IsChecked)
             {
+                ComboboxOutputDevice.Visibility = Visibility.Visible;
                 ScreenRecorder.IsOutputDeviceEnabled = true;
             }
             else
             {
+                ComboboxOutputDevice.Visibility = Visibility.Hidden;
                 ScreenRecorder.IsInputDeviceEnabled = false;
             }
         }
@@ -252,10 +247,12 @@ namespace AfronewsRecorder
         {
             if ((bool)ToggleButtonInput.IsChecked)
             {
+                ComboboxInputDevice.Visibility = Visibility.Visible;
                 ScreenRecorder.IsInputDeviceEnabled = true;
             }
             else
             {
+                ComboboxInputDevice.Visibility = Visibility.Hidden;
                 ScreenRecorder.IsInputDeviceEnabled = false;
             }
         }
