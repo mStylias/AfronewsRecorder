@@ -8,7 +8,7 @@
         Title="Simple Button Recorder" 
         Height="500" Width="500" 
         WindowStartupLocation="CenterScreen" 
-        WindowStyle="None" AllowsTransparency="True" Background="#B2EDEFEE"
+        WindowStyle="SingleBorderWindow" AllowsTransparency="False" Background="#FFEDEFEE"
         Icon="/record_icon_64.png" ResizeMode="CanMinimize" >
     <!--custom titlebar-->
     <WindowChrome.WindowChrome>
