@@ -1,0 +1,688 @@
+﻿
+[Header]
+ProjectFileVersion = 1.1
+[General]
+Program name = One Button Recorder
+Program version = 1.0.0
+Windows 2000 = 0
+Windows XP = 0
+Windows Server 2003 = 0
+Windows Vista = 0
+Windows Server 2008 = 0
+Windows 7 = 0
+Windows 8 = 0
+Windows 10 = 1
+Windows Server 2016 = 0
+DoNotCheckOS = 0
+Company name = Simple Is Key
+Website = https://
+SFA = 0
+DFA = 0
+Comp = 1
+[Graphics]
+Wizard image = <main>
+Header image = C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\record_icon_64.png
+Show Label = 1
+VisualStylesEnabled = 1
+[Files]
+Installation path = <ProgramFiles>\<Company>\<AppName>\
+Autcip = 1
+[Uninstall]
+Vwau = 0
+Website = https://
+Include uninstaller = 0
+Uninstaller filename = Uninstall
+UseCustomDisplayIcon = 0
+CustomDisplayIcon = <InstallPath>\
+[Licence]
+Licence dialog = 0
+[Finish]
+Sart program = 0
+Reboot computer = 0
+Program = <InstallPath>\
+ProgramArguments = 
+[Shortcuts]
+Allowtc = 0
+Shortcut path = <Company>\<AppName>\
+[Serialoptions]
+Allows = 0
+Number = 1000
+Mask = #####-#####-#####-#####
+[SplashScreen]
+Image = 
+Sound = 
+Time = 2
+PlaySound = 0
+Allow = 0
+[Build]
+File = C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\Installer\OneButtonRecorder.exe
+SetupIconPath = ..\icons\ancient.ico
+UninstallIconPath = ..\icons\ancient.ico
+CompressionMethod = 0
+CompressionLevel = 2
+[Updater]
+Allow = 0
+1 = <AppName>
+2 = <AppVersion>
+3 = http://
+4 = http://
+5 = http://
+6 = Update
+Language = 0
+RunProg = 
+RunProgs = 0
+Execdlls = 0
+[Languages]
+1
+14
+[Files/Dirs]
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Accessibility.dll
+9.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-console-l1-1-0.dll
+11.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-console-l1-2-0.dll
+12.1 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-datetime-l1-1-0.dll
+11.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-debug-l1-1-0.dll
+11.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-errorhandling-l1-1-0.dll
+11.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-file-l1-1-0.dll
+15.1 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-file-l1-2-0.dll
+11.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-file-l2-1-0.dll
+11.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-handle-l1-1-0.dll
+11.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-heap-l1-1-0.dll
+12.1 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-interlocked-l1-1-0.dll
+11.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-libraryloader-l1-1-0.dll
+12.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-localization-l1-2-0.dll
+14.1 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-memory-l1-1-0.dll
+11.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-namedpipe-l1-1-0.dll
+11.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-processenvironment-l1-1-0.dll
+12.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-processthreads-l1-1-0.dll
+14.1 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-processthreads-l1-1-1.dll
+11.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-profile-l1-1-0.dll
+11.1 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-rtlsupport-l1-1-0.dll
+12.1 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-string-l1-1-0.dll
+11.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-synch-l1-1-0.dll
+13.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-synch-l1-2-0.dll
+12.1 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-sysinfo-l1-1-0.dll
+12.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-timezone-l1-1-0.dll
+12.1 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-core-util-l1-1-0.dll
+11.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-conio-l1-1-0.dll
+12.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-convert-l1-1-0.dll
+15.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-environment-l1-1-0.dll
+11.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-filesystem-l1-1-0.dll
+13.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-heap-l1-1-0.dll
+12.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-locale-l1-1-0.dll
+12.2 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-math-l1-1-0.dll
+20.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-multibyte-l1-1-0.dll
+19.6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-private-l1-1-0.dll
+63.1 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-process-l1-1-0.dll
+12.7 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-runtime-l1-1-0.dll
+16.1 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-stdio-l1-1-0.dll
+17.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-string-l1-1-0.dll
+17.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-time-l1-1-0.dll
+13.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\api-ms-win-crt-utility-l1-1-0.dll
+11.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\clrcompression.dll
+730.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\clretwrc.dll
+256.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\clrjit.dll
+1.3 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\coreclr.dll
+4.9 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\createdump.exe
+53.4 KB
+exe
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\D3DCompiler_47_cor3.dll
+4.3 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\dbgshim.dll
+113.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\DirectWriteForwarder.dll
+487.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\hostfxr.dll
+486.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\hostpolicy.dll
+493.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\MaterialDesignColors.dll
+295.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\MaterialDesignThemes.Wpf.dll
+7.8 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Microsoft.CSharp.dll
+369 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Microsoft.DiaSymReader.Native.amd64.dll
+1.4 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Microsoft.VisualBasic.Core.dll
+410 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Microsoft.VisualBasic.dll
+7.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Microsoft.VisualBasic.Forms.dll
+96.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Microsoft.Win32.Primitives.dll
+8 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Microsoft.Win32.Registry.AccessControl.dll
+10.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Microsoft.Win32.Registry.dll
+34 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Microsoft.Win32.SystemEvents.dll
+41 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\mscordaccore.dll
+1 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\mscordaccore_amd64_amd64_5.0.521.16609.dll
+1 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\mscordbi.dll
+1 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\mscorrc.dll
+138.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\OneButtonRecorder.deps.json
+3.1 KB
+json
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\OneButtonRecorder.dll
+952.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\OneButtonRecorder.exe
+156.5 KB
+exe
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\OneButtonRecorder.pdb
+18.4 KB
+pdb
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\OneButtonRecorder.runtimeconfig.dev.json
+323 Byte
+json
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\OneButtonRecorder.runtimeconfig.json
+154 Byte
+json
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Ookii.Dialogs.Wpf.dll
+101 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PenImc_cor3.dll
+149.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationCore.dll
+3.3 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework.Aero.dll
+230 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework.Aero2.dll
+236 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework.AeroLite.dll
+164 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework.Classic.dll
+173.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework.dll
+5.6 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework.Luna.dll
+475.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework.Royale.dll
+194.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework-SystemCore.dll
+8.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework-SystemData.dll
+7.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework-SystemDrawing.dll
+7 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework-SystemXml.dll
+7.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationFramework-SystemXmlLinq.dll
+6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationNative_cor3.dll
+1.2 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\PresentationUI.dll
+808.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\ReachFramework.dll
+606 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\ScreenRecorderLib.dll
+1.7 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\ScreenRecorderLib.xml
+9.8 KB
+xml
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.CodeDom.dll
+167 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Collections.Concurrent.dll
+186.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Collections.dll
+280.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Collections.Immutable.dll
+171.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Collections.NonGeneric.dll
+36 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Collections.Specialized.dll
+34 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.ComponentModel.dll
+5.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.ComponentModel.EventBasedAsync.dll
+15.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.ComponentModel.Primitives.dll
+25.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.ComponentModel.TypeConverter.dll
+253.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Configuration.ConfigurationManager.dll
+362 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Console.dll
+63 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Data.Common.dll
+945.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Design.dll
+9.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Diagnostics.DiagnosticSource.dll
+67.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Diagnostics.EventLog.dll
+117.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Diagnostics.EventLog.Messages.dll
+771 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Diagnostics.FileVersionInfo.dll
+13 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Diagnostics.PerformanceCounter.dll
+112 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Diagnostics.Process.dll
+108 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Diagnostics.StackTrace.dll
+33.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Diagnostics.TraceSource.dll
+123.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.DirectoryServices.dll
+349.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Drawing.Common.dll
+416 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Drawing.Design.dll
+4.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Drawing.dll
+10 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Drawing.Primitives.dll
+49 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Formats.Asn1.dll
+67.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.IO.Compression.Brotli.dll
+27.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.IO.Compression.dll
+89.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.IO.FileSystem.AccessControl.dll
+35 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.IO.FileSystem.dll
+85.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.IO.FileSystem.DriveInfo.dll
+17 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.IO.IsolatedStorage.dll
+32 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.IO.MemoryMappedFiles.dll
+29 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.IO.Packaging.dll
+110.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.IO.Pipes.dll
+54.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Linq.dll
+128.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Linq.Expressions.dll
+537 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Memory.dll
+208.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Net.Http.dll
+644 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Net.NameResolution.dll
+34.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Net.NetworkInformation.dll
+68 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Net.Ping.dll
+29 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Net.Primitives.dll
+78 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Net.Requests.dll
+129 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Net.Security.dll
+229.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Net.ServicePoint.dll
+14.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Net.Sockets.dll
+196 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Net.WebClient.dll
+58 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Net.WebHeaderCollection.dll
+22.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.ObjectModel.dll
+36.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Printing.dll
+951.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Private.CoreLib.dll
+9 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Private.DataContractSerialization.dll
+746 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Private.Uri.dll
+236.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Private.Xml.dll
+2.9 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Private.Xml.Linq.dll
+139.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Reflection.Metadata.dll
+432 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Resources.Extensions.dll
+45 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Resources.Writer.dll
+16 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Runtime.CompilerServices.Unsafe.dll
+7 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Runtime.CompilerServices.VisualC.dll
+6.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Runtime.InteropServices.dll
+23 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Runtime.InteropServices.RuntimeInformation.dll
+11 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Runtime.Numerics.dll
+63.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Runtime.Serialization.Formatters.dll
+310.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Runtime.Serialization.Primitives.dll
+11.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.AccessControl.dll
+78.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Claims.dll
+39.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Cryptography.Algorithms.dll
+234.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Cryptography.Cng.dll
+152.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Cryptography.Csp.dll
+69.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Cryptography.Encoding.dll
+38.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Cryptography.Pkcs.dll
+259 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Cryptography.Primitives.dll
+44 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Cryptography.ProtectedData.dll
+22.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Cryptography.X509Certificates.dll
+174 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Cryptography.Xml.dll
+151 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Permissions.dll
+82 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Security.Principal.Windows.dll
+60.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Text.Encoding.CodePages.dll
+712 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Text.RegularExpressions.dll
+175.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Threading.AccessControl.dll
+32.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Threading.Channels.dll
+39.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Threading.dll
+75.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Windows.Controls.Ribbon.dll
+716.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Windows.Extensions.dll
+31.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Windows.Forms.Design.dll
+3 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Windows.Forms.Design.Editors.dll
+5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Windows.Forms.dll
+6.2 MB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Windows.Forms.Primitives.dll
+477 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Windows.Input.Manipulations.dll
+48.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Windows.Presentation.dll
+6 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\System.Xaml.dll
+550.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\ucrtbase.dll
+1011.4 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\UIAutomationClient.dll
+155.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\UIAutomationClientSideProviders.dll
+333.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\UIAutomationProvider.dll
+31.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\UIAutomationTypes.dll
+195.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\vcruntime140_cor3.dll
+93.9 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\WindowsBase.dll
+1019.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\WindowsFormsIntegration.dll
+83.5 KB
+dll
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\wpfgfx_cor3.dll
+1.9 MB
+dll
+[Licence_Begin]
+118
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\cf0\fs20\par
+}
+ [Licence_End]
+[Registry]
+[Variables]
+[SCs]
+Desktop
+One Button Recorder
+<InstallPath>\OneButtonRecorder.exe
+
+
+0
+[IFP_End]
+[Serials]
+[Serials_End]
+[Commands]

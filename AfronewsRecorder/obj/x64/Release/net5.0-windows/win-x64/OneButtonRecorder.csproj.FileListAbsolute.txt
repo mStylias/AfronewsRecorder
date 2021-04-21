@@ -524,3 +524,4 @@ C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Rel
 C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Release\net5.0-windows\win-x64\ref\OneButtonRecorder.dll
 C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Release\net5.0-windows\win-x64\OneButtonRecorder.pdb
 C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Release\net5.0-windows\win-x64\OneButtonRecorder.genruntimeconfig.cache
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Release\net5.0-windows\win-x64\OneButtonRecorder.csprojAssemblyReference.cache
