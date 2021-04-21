@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AfronewsRecorder" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:sys="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
         mc:Ignorable="d"
         Title="Simple Button Recorder" 
-        Height="678" Width="846" 
+        Height="582" Width="750" 
         WindowStartupLocation="CenterScreen" 
         WindowStyle="SingleBorderWindow"  Background="#FFEDEFEE"
         Icon="/record_icon_64.png" ResizeMode="CanMinimize"
@@ -23,13 +24,13 @@
             <RowDefinition Height="32"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Frame Grid.Row="1" x:Name="Main"/>
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="32"/>
             </Grid.RowDefinitions>
             <!--TitleBar-->
-            <!--<Grid Grid.Row="0" >
+            <Grid Grid.Row="0" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
@@ -51,7 +52,7 @@
                     Foreground="WhiteSmoke"
                     VerticalAlignment="Center">
                 </TextBlock>
-                --><!-- Titlebar buttons --><!--
+                <!--Titlebar buttons-->
                 <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.ColumnSpan="3">
                     <Button x:Name="ButtonWindowState" Style="{StaticResource MaterialDesignFlatButton}"
                             Click="ButtonWindowState_Click" WindowChrome.IsHitTestVisibleInChrome="True" FontSize="10">
@@ -63,9 +64,158 @@
                         <materialDesign:PackIcon x:Name="ExitIcon" Kind="Close" Foreground="#E6E8E7"/>
                     </Button>
                 </StackPanel>
-            </Grid>-->
+            </Grid>
         </Grid>
-        
-    </Grid>
 
+        <!-- Settings -->
+
+        <!--Record settings section-->
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <StackPanel  HorizontalAlignment="Center"  Orientation="Horizontal" VerticalAlignment="Center" >
+
+                <TextBlock Text="Record Settings" FontSize="20" FontWeight="DemiBold" Margin="0,15" Foreground="#0E3C6C" TextAlignment="Center" VerticalAlignment="Center"  />
+
+            </StackPanel>
+
+            <TextBlock x:Name="TextBlockRecordingPath" MaxWidth="700" TextAlignment="Center" VerticalAlignment="Center" FontSize="16">
+                    Save to:
+            </TextBlock>
+
+            <Button Style="{StaticResource MaterialDesignFlatLightBgButton}"
+                x:Name="ButtonBrowsePath"
+                Margin="0,10,0,0"
+                Width="200"
+                Height="32"
+                Cursor="Hand"
+                Foreground="WhiteSmoke"
+                FontSize="14" Click="ButtonBrowsePath_Click"
+                Content="Change Folder" Background="#FF7C4D96"/>
+
+
+            <!--output device-->
+            <Grid Margin="0,15,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3.15*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <ToggleButton
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="0,6,0,0"
+                     x:Name="ToggleButtonOutput"
+                     Style="{StaticResource MaterialDesignSwitchLightToggleButton}"  
+                   IsChecked="True" Click="ToggleButtonOutput_Click" Background="#FF7C4D96" 
+                />
+                <TextBlock
+                    Grid.Column="2"
+                    Text="Output device" 
+                    FontSize="20" FontWeight="DemiBold" 
+                    Foreground="#0E3C6C" 
+                    TextAlignment="Center" HorizontalAlignment="Left"
+                 />
+            </Grid>
+
+            <ComboBox
+                x:Name="ComboboxOutputDevice"
+                Style="{StaticResource MaterialDesignComboBox}"
+                wpf:TextFieldAssist.UnderlineBrush="#FF9A67EA"
+                BorderBrush="#7C4D96"
+                MaxWidth="300"
+                Width="200"
+                FontSize="16" SelectionChanged="ComboboxOutputDevice_SelectionChanged" Margin="0,0,0,20"
+                >
+
+                <ComboBoxItem IsSelected="True">Default</ComboBoxItem>
+            </ComboBox>
+
+
+            <!--input device-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3.15*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <ToggleButton
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Margin="0,6,0,0"
+                     x:Name="ToggleButtonInput"
+                     Style="{StaticResource MaterialDesignSwitchLightToggleButton}"  
+                    Click="ToggleButtonInput_Click" Background="#FF7C4D96"
+                />
+                <TextBlock
+                    Grid.Column="2"
+                    Text="Input device" 
+                    FontSize="20" FontWeight="DemiBold" 
+                    Foreground="#0E3C6C" 
+                    Margin="10,0,0,0"
+                    TextAlignment="Center" HorizontalAlignment="Left"
+                 />
+            </Grid>
+
+
+            <ComboBox
+                x:Name="ComboboxInputDevice"
+                Style="{StaticResource MaterialDesignComboBox}"
+                wpf:TextFieldAssist.UnderlineBrush="#FF9A67EA"
+                BorderBrush="#7C4D96"
+                Width="200"
+                MaxWidth="300"
+                d:Visibility="Visible"
+                FontSize="16" SelectionChanged="ComboboxInputDevice_SelectionChanged" Margin="0,0,0,20" Visibility="Hidden"
+                >
+
+                <ComboBoxItem IsSelected="True">Default</ComboBoxItem>
+            </ComboBox>
+
+            <!--fps selection-->
+            <TextBlock 
+                FontSize="20" FontWeight="DemiBold" 
+                Margin="0,15,0,5" Foreground="#0E3C6C" 
+                TextAlignment="Center" VerticalAlignment="Center"
+                Text="Frame Rate"
+                />
+
+            <ComboBox
+                x:Name="ComboBoxFramerate"
+                Style="{StaticResource MaterialDesignComboBox}"
+                wpf:TextFieldAssist.UnderlineBrush="#FF9A67EA"
+                BorderBrush="#7C4D96"
+                Width="50"
+                Margin="0,0,0,35"
+                FontSize="16" SelectionChanged="FPS_SelectionChanged"
+                >
+            </ComboBox>
+
+            <!--window record-->
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" >
+                <ToggleButton
+                     x:Name="ToggleButtonWindowRecord"
+                     Style="{StaticResource MaterialDesignSwitchLightToggleButton}"  
+                     Click="ToggleButtonWindowRecord_Click" Margin="0,15,0,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF7C4D96"
+                />
+                <TextBlock
+                    Text="Window Record" 
+                    FontSize="20" FontWeight="DemiBold" 
+                    Margin="19,15,19,5" Foreground="#0E3C6C" 
+                     TextAlignment="Center" VerticalAlignment="Center"
+                />
+            </StackPanel>
+
+            <ComboBox
+                d:Visibility="Visible"
+                x:Name="WindowRecord"
+                Style="{StaticResource MaterialDesignComboBox}"
+                wpf:TextFieldAssist.UnderlineBrush="#FF9A67EA"
+                BorderBrush="#7C4D96"
+                MaxWidth="300"
+                Width="300"
+                FontSize="16" SelectionChanged="WindowRecord_SelectionChanged" DropDownOpened="WindowRecord_DropDownOpened" Visibility="Hidden"
+                />
+        </StackPanel>
+    </Grid>
 </Window>

@@ -55,8 +55,6 @@ C:\Users\kkalo\OneDrive\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x
 C:\Users\kkalo\OneDrive\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\App.baml
 C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Debug\net5.0-windows\MaterialDesignColors.dll
 C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\bin\x64\Debug\net5.0-windows\MaterialDesignThemes.Wpf.dll
-C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\SettingsPage.baml
-C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\SettingsPage.g.cs
 C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\SettingsWindow.g.cs
 C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\App.baml
 C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\SettingsWindow.baml

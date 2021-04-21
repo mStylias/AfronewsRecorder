@@ -126,7 +126,7 @@ namespace AfronewsRecorder {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AfronewsRecorder;component/settingspage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AfronewsRecorder;V1.0.0.0;component/settingspage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\SettingsPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

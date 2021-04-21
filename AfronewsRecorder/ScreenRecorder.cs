@@ -26,7 +26,7 @@ namespace AfronewsRecorder
 
         public static bool IsWindowRecordingSelected { get; set; } 
 
-        public static IntPtr WindowHandle { get; set; }
+        public static RecordableWindow RecordableWindow { get; set; }
 
         public static bool IsInputDeviceEnabled { get { return Options.AudioOptions.IsInputDeviceEnabled; } set { Options.AudioOptions.IsInputDeviceEnabled = value; } }
         public static bool IsOutputDeviceEnabled { get { return Options.AudioOptions.IsOutputDeviceEnabled; } set { Options.AudioOptions.IsOutputDeviceEnabled = value; } }
@@ -69,18 +69,27 @@ namespace AfronewsRecorder
 
         Recorder _recorder;
         DateTime _startTime;
-        public void CreateRecording()
+        public bool CreateRecording()
         {
            
             if (IsWindowRecordingSelected)
             {
-                Options.DisplayOptions = new DisplayOptions();
-                Options.DisplayOptions.WindowHandle = WindowHandle;
+                if (Recorder.GetWindows().Find(h => h.Handle == RecordableWindow.Handle) != null)
+                {
+                    Options.DisplayOptions = new DisplayOptions();
+                    Options.DisplayOptions.WindowHandle = RecordableWindow.Handle;
+                }
+                else
+                {
+                    MessageBox.Show("The selected window does not exist anymore. Select another window or turn off window recording.", "Unable to locate window", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return false;
+                }
             }
             else
             {
                 Options.DisplayOptions = null;
             }
+
             _recorder = Recorder.CreateRecorder(Options);
             _recorder.OnRecordingComplete += Rec_OnRecordingComplete;
             _recorder.OnRecordingFailed += Rec_OnRecordingFailed;
@@ -97,6 +106,7 @@ namespace AfronewsRecorder
             _recorder.Record(RecordingPath);
 
             IsRecording = true;
+            return true;
         }
    
 

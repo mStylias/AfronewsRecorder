@@ -58,9 +58,8 @@ namespace AfronewsRecorder
                 CircleRecord.Fill = new SolidColorBrush(Color.FromRgb(124, 77, 150));
                 StopRecordTimer();
             }
-            else
-            {
-                _recorder.CreateRecording();
+            else if (_recorder.CreateRecording())
+            {  
                 CircleRecord.Fill = new SolidColorBrush(Color.FromRgb(212, 28, 34));
                 StartRecordTimer();
             } 

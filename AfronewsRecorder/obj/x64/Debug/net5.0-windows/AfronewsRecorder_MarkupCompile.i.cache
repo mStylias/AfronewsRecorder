@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\kkalo\OneDrive\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\obj\x64\Debug\net5.0-windows\
 AfronewsRecorder
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\kkalo\OneDrive\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\App.xaml
-3-1687058691
+C:\Users\Michalis\Documents\GitHub\AfronewsRecorder\AfronewsRecorder\App.xaml
+2-2121854466
 
-10-582190944
-2061633763177
-MainWindow.xaml;SettingsPage.xaml;SettingsWindow.xaml;
+9-104598813
+206-140415198
+MainWindow.xaml;SettingsWindow.xaml;
 
-True
+False
 
