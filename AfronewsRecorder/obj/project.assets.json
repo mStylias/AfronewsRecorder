@@ -155,9 +155,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
-      "projectName": "AfronewsRecorder",
-      "projectPath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
+      "projectUniqueName": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\OneButtonRecorder.csproj",
+      "projectName": "OneButtonRecorder",
+      "projectPath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\OneButtonRecorder.csproj",
       "packagesPath": "C:\\Users\\Michalis\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\obj\\",
       "projectStyle": "PackageReference",

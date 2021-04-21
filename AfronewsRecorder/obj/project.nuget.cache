@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oWpZ5ZxZTPwyk4vorkmMdHhED4db9+o2JvW8WXoUgINyRpaa0fBVsxUXoozM+oDTCK/tuQ8jB4p4iV+BxtvU0Q==",
+  "dgSpecHash": "/1ykL+hVXu9LlBwdST+gHSKhmk8h0/WNDvoEN7/MNHhrYwk3ZgTF6MJ7jthH80VETPP39/WHzR7S+ZSGq9X1Sg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\AfronewsRecorder.csproj",
+  "projectFilePath": "C:\\Users\\Michalis\\Documents\\GitHub\\AfronewsRecorder\\AfronewsRecorder\\OneButtonRecorder.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michalis\\.nuget\\packages\\materialdesigncolors\\2.0.0\\materialdesigncolors.2.0.0.nupkg.sha512",
     "C:\\Users\\Michalis\\.nuget\\packages\\materialdesignthemes\\4.0.0\\materialdesignthemes.4.0.0.nupkg.sha512",
