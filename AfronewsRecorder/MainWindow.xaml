@@ -8,8 +8,8 @@
         Title="Simple Button Recorder" 
         Height="500" Width="500" 
         WindowStartupLocation="CenterScreen" 
-        WindowStyle="SingleBorderWindow" Background="#FFEDEFEE"
-        Icon="/record_icon_64.png" ResizeMode="CanMinimize">
+        WindowStyle="None" AllowsTransparency="True" Background="#B2EDEFEE"
+        Icon="/record_icon_64.png" ResizeMode="CanMinimize" >
     <!--custom titlebar-->
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="32" CornerRadius="0" GlassFrameThickness="70" 
@@ -159,8 +159,8 @@
 
             <StackPanel Grid.Column="0"  Grid.ColumnSpan="1">
                 <TextBlock   
-                FontSize="20" FontWeight="Regular" 
-                Margin="5,0,0,0" Foreground="WhiteSmoke" 
+                FontSize="16" FontWeight="Regular" 
+                Margin="8,5,0,0" Foreground="WhiteSmoke" 
                 TextAlignment="Left" VerticalAlignment="Center" HorizontalAlignment="Left"
                 Text="One Button Recorder"
                 />
@@ -191,15 +191,15 @@
                     BorderThickness="0"
                     Cursor="Hand">
                     <Grid Background="Transparent" >
-                        <Path Width="160" Stretch="Uniform"  StrokeThickness="0" Fill="#8C4852">
+                        <Path Width="175" Stretch="Uniform"  StrokeThickness="0" Fill="#3D3352">
                             <Path.Data>
                                 <GeometryGroup FillRule="EvenOdd">
-                                    <EllipseGeometry RadiusX="100" RadiusY="100" Center="0,0" />
-                                    <EllipseGeometry RadiusX="130" RadiusY="130" Center="0,0" />
+                                    <EllipseGeometry RadiusX="80" RadiusY="80" Center="0,0" />
+                                    <EllipseGeometry RadiusX="120" RadiusY="120" Center="0,0" />
                                 </GeometryGroup>
                             </Path.Data>
                         </Path>
-                        <Path x:Name="CircleRecord"  Width="80" Stretch="Uniform" StrokeThickness="0" Fill="#FF7C4D96">
+                        <Path x:Name="CircleRecord"  Width="120" Stretch="Uniform" StrokeThickness="0" Fill="#FF7C4D96">
                             <Path.Data>
                                 <GeometryGroup FillRule="EvenOdd">
                                     <EllipseGeometry RadiusX="60" RadiusY="60" Center="0,0" />
@@ -209,7 +209,6 @@
                         </Path>
                         <TextBlock Text="REC"  FontSize="16" Foreground="White"  FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
-
                 </Button>
 
             </Grid>

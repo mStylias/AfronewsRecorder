@@ -165,16 +165,9 @@ namespace AfronewsRecorder
                 {
                     Settings.Framerate = text;
                     ComboBoxFramerate.SelectedItem = text;
-                    ScreenRecorder.FramerateInput = Int32.Parse(text);
+                    ScreenRecorder.Options.VideoOptions.Framerate = Int32.Parse(text);
                     Serializer.SerializeFramerateInput(text);
                 }
-                //else
-                //{
-                //    Settings.Framerate = "30";
-                //    ComboBoxFramerate.SelectedItem = Settings.Framerate;
-                //    ScreenRecorder.FramerateInput = Int32.Parse(Settings.Framerate);
-                //    Serializer.SerializeFramerateInput(Settings.Framerate);
-                //}
             }
         }
 
@@ -184,7 +177,7 @@ namespace AfronewsRecorder
             { 
                 Trace.WriteLine("Framerate " + ComboBoxFramerate.Text);        
                 ComboBoxFramerate.SelectedItem = Settings.Framerate;
-                ScreenRecorder.FramerateInput = Int32.Parse(Settings.Framerate);
+                ScreenRecorder.Options.VideoOptions.Framerate = Int32.Parse(Settings.Framerate);
                 Serializer.SerializeFramerateInput(Settings.Framerate);
             }
             
