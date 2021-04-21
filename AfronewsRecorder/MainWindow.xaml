@@ -184,8 +184,20 @@
 
         <!--record button-->
         <Grid Grid.Row="1">
-            <Grid>
-                <Button Style="{DynamicResource ButtonRecordStyle}" Click="ButtonRecord_Click"
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.4*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.4*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1" Grid.Column="1">
+            
+                <Button Style="{DynamicResource ButtonRecordStyle}"  Click="ButtonRecord_Click"
                     x:Name="ButtonRecord"
                     Background="Transparent"
                     BorderThickness="0"
