@@ -48,7 +48,7 @@ namespace AfronewsRecorder
                 Bitrate = AudioBitrate.bitrate_128kbps,
                 Channels = AudioChannels.Stereo,
                 IsAudioEnabled = true,
-                IsInputDeviceEnabled = true,
+                IsInputDeviceEnabled = false,
                 IsOutputDeviceEnabled = true,
                 AudioInputDevice = null, // Null means default
                 AudioOutputDevice = null
